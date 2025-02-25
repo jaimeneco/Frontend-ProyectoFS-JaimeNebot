@@ -37,4 +37,4 @@ Otros deportes:
 - Golf.
 
 ## Seguridad:
-Nuestros productos cuentan con todos los requisitos de seguridad y se encuentran completamente asegurados para cumplir con su función.
+Los productos que están en la web cuentan con la revisión y la aprobación de que el producto se encuentra en óptimas condiciones. Los productos deben ser revisados por la persona que los publica, siendo necesaria una foto común con el producto en perfectas condiciones. En la ida y en la devolución del producto. De todas formas, los productos están completamente asegurados para tranquilidad de los usuarios.
