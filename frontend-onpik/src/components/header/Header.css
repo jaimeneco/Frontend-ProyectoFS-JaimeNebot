@@ -1,0 +1,39 @@
+/*--------------------------------
+CSS HEADER GENERAL
+--------------------------------*/
+.Header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background: #202020;
+}
+
+/* CSS HEADER LOGOTIPO */
+.Header-logoImage {
+    width: 300px;
+    padding: 30px 40px;
+}
+
+/* CSS HEADER NAVEGACIÓN */
+.Header-nav {
+    font-family: "Oswald", sans-serif;
+    font-size: 1.3rem;
+}
+
+.Header-navList {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
+
+.Header-navLink {
+    color: #fff;
+    text-decoration: none;
+    padding: 30px;
+}
+
+.Header-navLink:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 5px;
+}
