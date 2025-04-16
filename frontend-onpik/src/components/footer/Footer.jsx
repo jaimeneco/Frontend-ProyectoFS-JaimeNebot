@@ -8,9 +8,6 @@ export const Footer = () => {
                 <nav className="Footer-nav">
                     <ul className="Footer-navList">
                         <li className="Footer-navLink">
-                            <NavLink to='/home'>Home</NavLink>
-                        </li>
-                        <li className="Footer-navLink">
                             <NavLink to="/mountain">Mountain</NavLink>
                         </li>
                         <li className="Footer-navLink">
@@ -20,23 +17,34 @@ export const Footer = () => {
                             <NavLink to='/aboutus'>About us</NavLink>
                         </li>
                         <li className="Footer-navLink">
-                            <NavLink to='/Usuario'>Usuario</NavLink>
+                            <NavLink to='/usuario'>Usuario</NavLink>
+                        </li>
+                        <li className="Footer-navLink">
+                            <NavLink to='/compras'>Compras</NavLink>
                         </li>
                     </ul>
                 </nav>
 
                 <div className="Footer-content">
-                    <img src="src/assets/logo.png" alt="Logotipo ONPIK" title='ONPIK' className="Footer-logoImage" loading='lazy' />
+                    <div className="Footer-logo">
+                        <NavLink to="/home">
+                            <img src="src/assets/logo.png" alt="Logotipo ONPIK" title='ONPIK' className="Footer-logoImage" loading='lazy' />
+                        </NavLink>
+                    </div>
+
 
                     <ul className="Footer-navList">
+                        <li className="Footer-navLink">
+                            
+                        </li>
                         <li className="Footer-text">
                             <p>© 2025 ONPIK - Todos los derechos reservados</p>
                         </li>
                         <li className="Footer-textLink">
-                            <a href="/">Términos y condiciones</a>
+                        <NavLink to='/tyc'>Términos y condiciones</NavLink>
                         </li>
                         <li className="Footer-textLink">
-                            <a href="/">Política de privacidad y cookies</a>
+                            <NavLink to='/ppc'>Política de privacidad y cookies</NavLink>
                         </li>
                     </ul>
                 </div>
