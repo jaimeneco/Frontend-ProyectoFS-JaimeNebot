@@ -23,14 +23,15 @@ function App() {
         <BrowserRouter>
           <>
             <Routes>
-              <Route path='/login' element={<Login />} />
-              <Route path='/registro' element={<Registro />} />
-              <Route path='/home' element={<Home />} />
+              <Route path='/' element={<Home />} />
               <Route path='/mountain' element={<Mountain />} />
               <Route path='/sea' element={<Sea />} />
               <Route path='/aboutus' element={<AboutUs />} />
-              <Route path='/compras' element={<Compras />} />
               <Route path='/usuario' element={<Usuario />} />
+              <Route path='/compras' element={<Compras />} />
+              <Route path='/login' element={<Login />} />
+              <Route path='/registro' element={<Registro />} />
+              
               <Route path='/terminos' element={<Terminos />} />
               <Route path='/privacidad' element={<Privacidad />} />
 

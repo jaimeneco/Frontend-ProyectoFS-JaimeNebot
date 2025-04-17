@@ -27,7 +27,7 @@ export const Footer = () => {
 
                 <div className="Footer-content">
                     <div className="Footer-logo">
-                        <NavLink to="/home">
+                        <NavLink to="/">
                             <img src="src/assets/logo.png" alt="Logotipo ONPIK" title='ONPIK' className="Footer-logoImage" loading='lazy' />
                         </NavLink>
                     </div>
@@ -41,10 +41,10 @@ export const Footer = () => {
                             <p>© 2025 ONPIK - Todos los derechos reservados</p>
                         </li>
                         <li className="Footer-textLink">
-                        <NavLink to='/tyc'>Términos y condiciones</NavLink>
+                        <NavLink to='/terminos'>Términos y condiciones</NavLink>
                         </li>
                         <li className="Footer-textLink">
-                            <NavLink to='/ppc'>Política de privacidad y cookies</NavLink>
+                            <NavLink to='/privacidad'>Política de privacidad y cookies</NavLink>
                         </li>
                     </ul>
                 </div>

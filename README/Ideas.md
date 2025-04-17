@@ -17,24 +17,14 @@ Definición del Proyecto: Web de alquiler de material deportivo.
 Tiempo de uso: 14 días de 365 días. Tiempo inutilizado: 351 de 365.
 
 ## Principales deportes:
-Deportes de ruedas:
-- Ciclismo: bicicletas BMX, de montaña, de carretera, eléctricas o no eléctricas.
-- Vehículos de motor: karts y minimotos de pequeña cilindrada y hasta un límite de precio.
-- Pitbikes: motos para rodar en circuitos pequeños.
-https://impormotor.com/14-PITBIKE-IMR-ASFALTO 
+Deportes de invierno en montaña:
+- Esquí y SnowBoard: tablas y esquís.
+- Material y equipamiento relacionado.
 
-Deportes de invierno:
-- Esquí y SnowBoard: tablas, esquís, material y equipamiento relacionado.
-- Otros deportes de nieve: senderismo por alta montaña, esquí alpino... 
-- Trineos y cosas parecidas...
+Deportes de verano de mar:
+- Surf y kitesurf: tablas de uno y otro y velas.
+- Material y equipamiento relacionado.
 
-Deportes de verano:
-- Surf: tablas, inventos, neoprenos, bacas para el coche...
-- Vela y remo: windsurf, kitesurf, vela, kayak, catamarán...
-- Esquí acuático: material y pequeñas lanchas y barcos.
-
-Otros deportes:
-- Golf.
 
 ## Seguridad:
 Los productos que están en la web cuentan con la revisión y la aprobación de que el producto se encuentra en óptimas condiciones. Los productos deben ser revisados por la persona que los publica, siendo necesaria una foto común con el producto en perfectas condiciones. En la ida y en la devolución del producto. De todas formas, los productos están completamente asegurados para tranquilidad de los usuarios.

@@ -6,7 +6,7 @@ export const Header = () => {
         <>
             <header className="Header">
                 <div className="Header-logo">
-                    <NavLink to="/home">
+                    <NavLink to="/">
                         <img src="src/assets/logo.png" alt="Logotipo ONPIK" title='ONPIK' className="Header-logoImage" loading='lazy' />
                     </NavLink>
                 </div>
