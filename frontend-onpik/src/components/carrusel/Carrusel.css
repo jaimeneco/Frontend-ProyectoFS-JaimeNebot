@@ -1,0 +1,68 @@
+.carrusel {
+    overflow: hidden;
+    width: 600px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.carrusel-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+}
+
+.carrusel-slide {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.carrusel-slide img {
+    width: 100%;
+    display: block;
+}
+
+.carrusel-controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    padding: 0 10px;
+    pointer-events: none; /* para que no interfiera el contenedor */
+}
+
+.carrusel-controls button {
+    pointer-events: auto; /* permite click en los botones */
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.carrusel-controls button:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.carrusel-indicators {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.carrusel-indicators button {
+    margin: 0 5px;
+    padding: 5px;
+    border-radius: 50%;
+    border: none;
+    background-color: #ccc;
+    cursor: pointer;
+}
+
+.carrusel-indicators .active {
+    background-color: #008080;
+}

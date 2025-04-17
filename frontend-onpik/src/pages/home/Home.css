@@ -1,0 +1,26 @@
+.Main-content {
+    display: flex;
+    flex-direction: row;
+}
+
+.Content-right {
+    padding: 10px;
+}
+
+.Content-left {
+    padding: 10px;
+}
+
+.Main-carrusel {
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+}
+
+.Carrusel-text {
+    align-content: center;
+}
+
+.Main-nuevosProductos{
+    padding: 20px;
+}

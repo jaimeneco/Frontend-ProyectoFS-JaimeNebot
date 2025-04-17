@@ -2,10 +2,6 @@
 import './App.css'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
-// Components:
-import { Header } from './components/header/Header'
-import { Footer } from './components/footer/Footer'
-
 // Pages
 import { Login } from '../src/pages/login/Login'
 import { Registro } from '../src/pages/registro/Registro'
@@ -16,6 +12,7 @@ import { AboutUs } from '../src/pages/aboutUs/AboutUs'
 import { Compras } from '../src/pages/compras/Compras'
 import { Usuario } from '../src/pages/usuario/Usuario'
 import {Error} from '../src/pages/error/Error'
+
 
 
 function App() {
