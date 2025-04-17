@@ -2,7 +2,6 @@ import './Mountain.css';
 import { Header } from '../../components/header/Header'
 import { Footer } from '../../components/footer/Footer'
 import { Carrusel } from '../../components/carrusel/Carrusel';
-import { GaleriaImagenes } from '../../components/galeria/Galeria';
 
 export const Mountain = () => {
     const images = [
