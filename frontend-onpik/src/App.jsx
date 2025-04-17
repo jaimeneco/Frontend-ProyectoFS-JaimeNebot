@@ -12,6 +12,9 @@ import { AboutUs } from '../src/pages/aboutUs/AboutUs'
 import { Compras } from '../src/pages/compras/Compras'
 import { Usuario } from '../src/pages/usuario/Usuario'
 import {Error} from '../src/pages/error/Error'
+import { Terminos } from '../src/pages/terminos/Terminos'
+import { Privacidad } from '../src/pages/privacidad/Privacidad'
+
 
 
 
@@ -28,6 +31,9 @@ function App() {
               <Route path='/aboutus' element={<AboutUs />} />
               <Route path='/compras' element={<Compras />} />
               <Route path='/usuario' element={<Usuario />} />
+              <Route path='/terminos' element={<Terminos />} />
+              <Route path='/privacidad' element={<Privacidad />} />
+
             </Routes>
             </>
         </BrowserRouter>
