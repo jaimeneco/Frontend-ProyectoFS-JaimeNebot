@@ -18,10 +18,6 @@ import { Usuario } from '../src/pages/usuario/Usuario'
 import {Error} from '../src/pages/error/Error'
 
 
-// PAGES EXPORRTADAS
-
-
-
 function App() {
   return (
         <BrowserRouter>
