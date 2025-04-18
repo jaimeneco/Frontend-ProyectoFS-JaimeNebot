@@ -31,7 +31,7 @@ export const Home = () => {
             </div>
             <div className='Main-carrusel'>
                 <p className='Carrusel-text'>¡Descubre todos nuestros productos!</p>
-                <Carrusel images={images} autoPlay={true} />
+                <Carrusel images={images} autoPlay={false} />
             </div>
             <div className='Main-nuevosProductos'>
                 <img src="https://dummyjson.com/image/600x300/008080/ffffff?text=Deportes+varios" alt="Imagen nuevos productos" />

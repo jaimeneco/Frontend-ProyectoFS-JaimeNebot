@@ -5,10 +5,11 @@
     padding: 0;
 }
 
-.Body {
+.Root {
   display: flex;
   flex-direction: column;
-  overflow: auto;
+  min-height: 100vh;
+  padding: 0px;
 }
 
 
