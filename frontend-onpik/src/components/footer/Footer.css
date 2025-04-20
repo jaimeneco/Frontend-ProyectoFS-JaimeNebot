@@ -2,7 +2,7 @@
 .Footer {
     display: flex;
     width: 100%;
-    background-color: #202020;
+    background-color: #c69c6d;
     color: #F1ECE7;
     justify-content: space-between;
     align-items: center;
@@ -43,7 +43,7 @@
 
 /* CSS FOOTER LOGOTIPO */
 .Footer-logoImage {
-    width: 300px;
+    width: 400px;
 }
 
 /* CSS FOOTER CONTENIDO */

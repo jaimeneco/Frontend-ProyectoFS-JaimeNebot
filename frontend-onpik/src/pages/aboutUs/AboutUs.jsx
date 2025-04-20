@@ -7,7 +7,7 @@ export const AboutUs = () => {
         <>
             <Header />
             <main className='Main-about'>
-                <div className='Main-content'>
+                <div className='Main-aboutContent'>
                     <img src="./src/public/imgs/img-about.png" alt="Imagen genérica" />
                     <button>Call to action</button>
                 </div>
@@ -42,13 +42,8 @@ export const AboutUs = () => {
                 </div>
 
                 <div className='Logos'>
-                    <p>Entidades colaboradoras:</p>
-                    {/* <img src="" alt="" />
-                    <img src="" alt="" />
-                    <img src="" alt="" />
-                    <img src="" alt="" />
-                    <img src="" alt="" />
-                    <img src="" alt="" /> */}
+                    <p className='Logos-text'>Entidades colaboradoras:</p>
+                    <img className='Logos-img' src="./src/public/imgs/img-logos.png" alt="Empresas colaboradoras" />
                 </div>
             </main>
             

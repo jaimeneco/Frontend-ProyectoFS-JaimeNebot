@@ -2,12 +2,27 @@
     background: #fff;
 
 }
-.Main-content{
+.Main-aboutContent{
     display: flex;
     flex-direction: column;
 }
 
-.Main-content img{
+.Main-aboutContent img{
     width: 100%;
     ;
+}
+
+.Logos {
+    background: #202020;
+    justify-items: center;
+    color: #fff;
+}
+
+.Logos-text{
+    font-size: 30px;
+    padding: 30px;
+}
+
+.Logos-img {
+padding: 20px;
 }
