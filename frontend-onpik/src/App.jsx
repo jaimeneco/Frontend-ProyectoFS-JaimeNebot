@@ -14,7 +14,6 @@ import { Usuario } from '../src/pages/usuario/Usuario'
 import {Error} from '../src/pages/error/Error'
 import { Terminos } from '../src/pages/terminos/Terminos'
 import { Privacidad } from '../src/pages/privacidad/Privacidad'
-import { Header } from './components/header/Header'
 
 
 
@@ -35,6 +34,8 @@ function App() {
               
               <Route path='/terminos' element={<Terminos />} />
               <Route path='/privacidad' element={<Privacidad />} />
+
+              <Route path='/error' element={<Error />} />
 
             </Routes>
             </>

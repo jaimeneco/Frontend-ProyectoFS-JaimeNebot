@@ -1,0 +1,15 @@
+.Error-content {
+    display: flex;
+    flex-direction: column;
+    background: #202020;
+    color: #fff;
+    font-size: 30px;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+}
+
+.Error-img{
+    width: 300px;
+    padding: 60px;
+}

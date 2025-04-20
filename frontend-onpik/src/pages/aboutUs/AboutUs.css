@@ -1,0 +1,13 @@
+.Main-about {
+    background: #fff;
+
+}
+.Main-content{
+    display: flex;
+    flex-direction: column;
+}
+
+.Main-content img{
+    width: 100%;
+    ;
+}

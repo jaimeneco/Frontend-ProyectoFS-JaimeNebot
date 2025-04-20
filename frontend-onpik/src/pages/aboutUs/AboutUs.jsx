@@ -6,9 +6,9 @@ export const AboutUs = () => {
     return (
         <>
             <Header />
-            <main>
+            <main className='Main-about'>
                 <div className='Main-content'>
-                    <img src="https://dummyjson.com/image/600x300/008080/ffffff?text=Snow" alt="Imagen genérica" />
+                    <img src="./src/public/imgs/img-about.png" alt="Imagen genérica" />
                     <button>Call to action</button>
                 </div>
                 <div className='Content-historia'>

@@ -20,12 +20,16 @@ CSS HEADER GENERAL
 .Header-nav {
     font-family: "Oswald", sans-serif;
     font-size: 1.3rem;
+    text-decoration: none;
+    color: #fff;
 }
 
 .Header-navList {
     display: flex;
     flex-direction: row;
     list-style: none;
+    text-decoration: none;
+    color: #fff;
 }
 
 .Header-navLink {
@@ -36,5 +40,5 @@ CSS HEADER GENERAL
 
 .Header-navLink:hover {
     text-decoration: underline;
-    text-decoration-thickness: 5px;
+    text-decoration-thickness: 3px;
 }

@@ -5,6 +5,14 @@ import { Footer } from '../../components/footer/Footer'
 
 export const Error = () => {
     return ( 
-        <p>Error</p>
+        <>
+        <Header />
+        <main className='Error-content'>
+            <p>Ups... ¡Parece que hubo un error!</p>
+            <img className='Error-img' src="./src/public/img-error.png" alt="" />
+        </main>
+        <Footer />
+        
+        </>
     );
 }

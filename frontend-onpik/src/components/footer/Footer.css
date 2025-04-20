@@ -1,8 +1,4 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
+
 .Footer {
     display: flex;
     width: 100%;
@@ -18,13 +14,14 @@
     display: flex;
     flex-direction: column;
     padding: 0px;
+    font-family: "Oswald", sans-serif;
 }
 
 .Footer-navList{
     display: flex;
     flex-direction: column;
     list-style: none;
-    font-family: sans-serif;
+    text-align: justify;
 }
 
 .Footer-navLink {
@@ -34,6 +31,8 @@
     text-decoration: none;
     padding: 10px;
     font-size: 1.2rem;
+    font-family: "Oswald", sans-serif;
+    font-size: 1.3rem;
 }
 
 .Footer-navLink:hover {
@@ -52,13 +51,15 @@
     display: flex;
     flex-direction: column;
     padding: 0px 10px 10px;
-    align-items: center;
+    /* align-items: center;
+    justify-content: center; */
 }
 
 /* CSS FOOTER COPYRIGHT */
 .Footer-text{
     font-family: "Oswald", sans-serif;
     font-size: large;
+    
 }
 
 /* CSS FOOTER TÉRMINOS Y CONDICIONES */
