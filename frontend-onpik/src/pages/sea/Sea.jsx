@@ -2,6 +2,7 @@ import './Sea.css';
 import { Header } from '../../components/header/Header'
 import { Footer } from '../../components/footer/Footer'
 import { Carrusel } from '../../components/carrusel/Carrusel';
+import { TituloSea } from '../../components/tituloAnimado/TituloSea';
 
 export const Sea = () => {
     const images = [
@@ -17,8 +18,7 @@ export const Sea = () => {
             <main>
                 <div className='Main-content'>
                     <div className='Content-left'>
-                        <img src="https://dummyjson.com/image/600x300/008080/ffffff?text=Surf" alt="Imagen snow" />
-                        <button>Call to action</button>
+                        <TituloSea />
                     </div>
                 </div>
                 <div className='Main-carrusel'>

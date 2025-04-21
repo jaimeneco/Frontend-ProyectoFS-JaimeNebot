@@ -2,6 +2,7 @@ import './Mountain.css';
 import { Header } from '../../components/header/Header'
 import { Footer } from '../../components/footer/Footer'
 import { Carrusel } from '../../components/carrusel/Carrusel';
+import { TituloMountain } from '../../components/tituloAnimado/TituloMountain';
 
 export const Mountain = () => {
     const images = [
@@ -17,8 +18,7 @@ export const Mountain = () => {
             <main>
                 <div className='Main-content'>
                     <div className='Content-left'>
-                        <img src='./src/public/imgs/img-mountain.jpg' alt="Imagen snow" />
-                        <button className='Content-leftBtn'>Call to action</button>
+                        <TituloMountain/>
                     </div>
                 </div>
                 <div className='Main-carrusel'>
