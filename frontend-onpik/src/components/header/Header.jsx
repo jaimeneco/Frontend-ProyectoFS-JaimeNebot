@@ -22,10 +22,10 @@ export const Header = () => {
                             <NavLink className="Header-navLink" to='/aboutus'>About us</NavLink>
                         </li>
                         <li className="Header-navLink">
-                            <NavLink className="Header-navLink" to='/usuario'>Usuario</NavLink>
+                            <NavLink className="Header-navLink" to='/usuario'><img src="./src/public/imgs/img-header/img-perfil.png" alt="Ir al perfil"/></NavLink>
                         </li>
                         <li className="Header-navLink">
-                            <NavLink className="Header-navLink" to='/compras'>Compras</NavLink>
+                            <NavLink className="Header-navLink" to='/compras'><img src="./src/public/imgs/img-header/img-compras.png" alt="Ir a compras"/></NavLink>
                         </li>
                     </ul>
                 </nav>

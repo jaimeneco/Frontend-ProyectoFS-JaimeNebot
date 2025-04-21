@@ -37,6 +37,9 @@ CSS HEADER GENERAL
     text-decoration: none;
     padding: 30px;
 }
+.Header-navLink img {
+    width: 25px;
+}
 
 .Header-navLink:hover {
     text-decoration: underline;
