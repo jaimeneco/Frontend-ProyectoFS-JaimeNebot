@@ -22,11 +22,11 @@ export const Mountain = () => {
                     </div>
                 </div>
                 <div className='Main-carrusel'>
-                    <p className='Carrusel-text'>¡Descubre todos nuestros productos!</p>
+                    <p className='Carrusel-text'>¡A la montaña 100% equipado!</p>
                     <Carrusel images={images} autoPlay={false} />
                 </div>
                 <div className='Main-productos'>
-                    <p className='Productos-text'>Snowboard</p>
+                    <p className='Productos-text'>Snowboard:</p>
                     <div className='Productos-img'></div>
                     <img src="https://dummyjson.com/image/200x300/008080/ffffff?text=Imagen+1" alt="" />
                     <img src="https://dummyjson.com/image/200x300/008080/ffffff?text=Imagen+1" alt="" />
@@ -34,7 +34,7 @@ export const Mountain = () => {
                     <img src="https://dummyjson.com/image/200x300/008080/ffffff?text=Imagen+1" alt="" />
                     <img src="https://dummyjson.com/image/200x300/008080/ffffff?text=Imagen+1" alt="" />
 
-                    <p className='Productos-text'>Ski</p>
+                    <p className='Productos-text'>Ski:</p>
                     <div className='Productos-img'>
                         <img src="https://dummyjson.com/image/200x300/008080/ffffff?text=Imagen+1" alt="" />
                         <img src="https://dummyjson.com/image/200x300/008080/ffffff?text=Imagen+1" alt="" />
@@ -43,7 +43,7 @@ export const Mountain = () => {
                         <img src="https://dummyjson.com/image/200x300/008080/ffffff?text=Imagen+1" alt="" />
                     </div>
 
-                    <p className='Productos-text'>Equipamiento y accesorios</p>
+                    <p className='Productos-text'>Equipamiento y accesorios:</p>
                     <div className='Productos-img'>
                         <img src="https://dummyjson.com/image/200x300/008080/ffffff?text=Imagen+1" alt="" />
                         <img src="https://dummyjson.com/image/200x300/008080/ffffff?text=Imagen+1" alt="" />
