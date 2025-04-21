@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
-import './TituloAnimado.css';
+import './TituloAnimado.css'; // Asegúrate de tener la clase .aparece en tu CSS
 
-export const TituloSea = () => {
+export const TituloNuevosProductos = () => {
     const tituloRef = useRef(null);
 
     useEffect(() => {
@@ -15,9 +15,9 @@ export const TituloSea = () => {
 
     return (
         <div className="Contenedor-img">
-            <img src='./src/public/imgs/img-sea.jpg' alt="Fondo mar" className="Img-sea" />
-            <h1 ref={tituloRef} className="TituloAnimado-sea">
-                CON ONPIK DISFRUTARÁS <br/> COMO NUNCA DE TU <br/> TIEMPO EN EL AGUA...
+            <img src='./src/public/imgs/img-landingMore.jpg' alt="Img nuevos productos" className="Img-nuevos" />
+            <h1 ref={tituloRef} className="TituloAnimado-nuevos">
+                Más deportes próximamente...
             </h1>
         </div>
     );

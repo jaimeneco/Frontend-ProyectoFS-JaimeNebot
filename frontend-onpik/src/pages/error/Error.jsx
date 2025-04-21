@@ -9,7 +9,7 @@ export const Error = () => {
         <Header />
         <main className='Error-content'>
             <p>Ups... ¡Parece que hubo un error!</p>
-            <img className='Error-img' src="./src/public/img-error.png" alt="" />
+            <img className='Error-img' src="./src/public/imgs/img-error.png" alt="" />
         </main>
         <Footer />
         

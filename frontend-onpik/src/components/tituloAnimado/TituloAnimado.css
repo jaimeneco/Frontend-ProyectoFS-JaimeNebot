@@ -1,19 +1,18 @@
+/*--------------------------------
+CSS GENERAL MOUNTAIN y SEA
+--------------------------------*/
 .Contenedor-img {
     position: relative;
     width: 100%;
     height: 80%;
     overflow: hidden;
 }
-
+/*--------------------------------
+CSS ESPECÍFICO MOUNTAIN
+--------------------------------*/
 .Img-mountain{
     width: 100%;
     height: 100%;
-    object-fit: cover;
-}
-
-.Img-sea{
-    width: 100%;
-    height: 80%;
     object-fit: cover;
 }
 
@@ -34,6 +33,15 @@
     transform: translateX(0) translateY(-50%);
 }
 
+/*--------------------------------
+CSS ESPECÍFICO SEA
+--------------------------------*/
+.Img-sea{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 .TituloAnimado-sea {
     position: absolute;
     top: 50%;
@@ -49,5 +57,32 @@
 }
 
 .TituloAnimado-sea.aparece {
+    transform: translateX(0) translateY(-50%);
+}
+
+/*--------------------------------
+CSS ESPECÍFICO NUEVOS PRODUCTOS
+--------------------------------*/
+.Img-nuevos{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.TituloAnimado-nuevos {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateX(-100%) translateY(-50%);
+    color: #202020;
+    padding: 20px 40px;
+    transition: transform 0.8s ease;
+    white-space: nowrap;
+    font-size: 2.5rem;
+    font-family: Oswald, sans-serif;
+    color: #fff;
+}
+
+.TituloAnimado-nuevos.aparece {
     transform: translateX(0) translateY(-50%);
 }

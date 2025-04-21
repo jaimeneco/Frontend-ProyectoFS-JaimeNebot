@@ -1,14 +1,41 @@
+.Main {
+    display: flex;
+    flex-direction: column;
+}
 .Main-content {
     display: flex;
     flex-direction: row;
 }
 
-.Content-right {
-    padding: 10px;
+.Content-snow{
+    width: 100%;
 }
 
-.Content-left {
-    padding: 10px;
+.Content-imgSnow {
+    width: 100%;
+}
+
+.Content-imgSnow:hover{
+    transform:scale(1.05);
+    filter: brightness(60%);
+}
+
+.Content-surf {
+    width: 100%;
+}
+
+.Content-imgSurf {
+    width: 100%;
+}
+
+.Content-imgSurf:hover{
+    transform:scale(1.05);
+    filter: brightness(60%);
+}
+
+.Content-imgMore {
+    width: 100%;
+    height: 30%;
 }
 
 .Main-carrusel {
