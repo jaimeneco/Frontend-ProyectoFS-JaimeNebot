@@ -21,12 +21,12 @@ export const Home = () => {
                 <div className='Main-content'>
                     <div className='Content-snow'>
                         <NavLink to="/mountain">
-                            <img src="./src/public/imgs/img-home/img-landingSnow.png" alt="Imagen snow" title='ONPIK Mountain' className='Content-imgSnow' loading='lazy' />
+                            <img src="./src/public/imgs/img-home/img-landingSnow.png" alt="Imagen snow" title='Ir a Mountain' className='Content-imgSnow' loading='lazy' />
                         </NavLink>
                     </div>
                     <div className='Content-surf'>
                         <NavLink to="/sea">
-                            <img src="./src/public/imgs/img-home/img-landingSurf.jpg" alt="Imagen surf" title='ONPIK Sea' className='Content-imgSurf' loading='lazy' />
+                            <img src="./src/public/imgs/img-home/img-landingSurf.jpg" alt="Imagen surf" title='Ir a Sea' className='Content-imgSurf' loading='lazy' />
                         </NavLink>
                     </div>
                 </div>

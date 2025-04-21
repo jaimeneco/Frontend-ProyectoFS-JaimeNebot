@@ -7,8 +7,8 @@ export const Registro = () => {
     return ( 
         <>
         <Header />
-        <main>
-            <p>REGISTRA TU USUARIO:</p>
+        <main className='Main-registro'>
+            <p className='Main-formTitle' >REGISTRA TU USUARIO:</p>
             <FormRegistro />
         </main>
         <Footer />

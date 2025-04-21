@@ -1,0 +1,53 @@
+.Form-registro {
+    font-family: 'Oswald', sans-serif;
+    background-color: #ffffff;
+    color: #000000;
+    margin: 0;
+    padding: 2rem;
+}
+
+.Main-form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: #fff;
+    border: 3px solid #202020;
+    border-radius: 8px;
+}
+
+.Fieldset {
+    display: flex;
+    flex-direction: column;
+    border: none;
+}
+
+.Fieldset-label {
+    padding: 0px 0px;
+    margin-bottom: 20px;
+    font-size: 1.4rem;
+}
+
+.Fieldset-input {
+    padding: 10px 40px;
+    border: 1.5px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: 'Lucida Sans', sans-serif;
+}
+
+.Button {
+    width: 100%;
+    padding: 20px;
+    margin: 20px 0px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.Button[type="submit"]:hover {
+    background-color: #333;
+}

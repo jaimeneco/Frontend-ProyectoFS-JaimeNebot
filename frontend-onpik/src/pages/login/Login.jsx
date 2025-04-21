@@ -7,8 +7,8 @@ export const Login = () => {
     return ( 
         <>
         <Header />
-        <main>
-            <p>INICIO DE SESIÓN</p>
+        <main className='Main-login'>
+            <p className='Main-formTitle'>INICIO DE SESIÓN:</p>
             <FormInicio />
         </main>
         <Footer />

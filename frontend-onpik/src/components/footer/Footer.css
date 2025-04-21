@@ -35,6 +35,10 @@
     font-size: 1.3rem;
 }
 
+.Footer-navLink img {
+    width: 25px;
+}
+
 .Footer-navLink:hover {
     text-decoration: underline;
     text-decoration-color: #F1ECE7;
