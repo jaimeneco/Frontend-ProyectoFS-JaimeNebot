@@ -17,8 +17,8 @@ export const Mountain = () => {
             <main>
                 <div className='Main-content'>
                     <div className='Content-left'>
-                        <img src="https://dummyjson.com/image/600x300/008080/ffffff?text=Snow" alt="Imagen snow" />
-                        <button>Call to action</button>
+                        <img src='./src/public/imgs/img-mountain.jpg' alt="Imagen snow" />
+                        <button className='Content-leftBtn'>Call to action</button>
                     </div>
                 </div>
                 <div className='Main-carrusel'>

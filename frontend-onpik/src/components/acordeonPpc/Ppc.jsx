@@ -1,51 +1,28 @@
 import { useState } from "react";
+import './Ppc.css';
 
 const seccionesPoli = [
     {
         titulo: "1. ¿Quién es el responsable del tratamiento de tus datos?",
-        contenido: `ONPIK, S.L.
-[Dirección de la empresa]
-Correo electrónico: info@onpik.com`,
+        contenido: <p>ONPIK, S.L. Valencia. Correo electrónico: info@onpik.com</p>
     },
     {
         titulo: "2. ¿Qué datos personales recopilamos?",
-        contenido: `Cuando te registras o utilizas nuestros servicios, podemos recopilar los siguientes datos:
-
-- Datos identificativos: nombre, apellidos, dirección de correo electrónico.
-- Datos de contacto: teléfono, dirección postal.
-- Información de uso: actividad dentro de la plataforma, historial de alquileres.
-- Datos de pago: gestionados de forma segura por pasarelas de pago externas.
-- Ubicación aproximada (si se habilita) para facilitar búsquedas geolocalizadas.`,
+        contenido: <p>Cuando te registras o utilizas nuestros servicios, podemos recopilar los siguientes datos:<br/>-Datos identificativos: nombre, apellidos, dirección de correo electrónico.<br/>-Datos de contacto: teléfono, dirección postal.<br/>-Información de uso: actividad dentro de la plataforma, historial de alquileres.<br/>-Datos de pago: gestionados de forma segura por pasarelas de pago externas.</p>
     },
     {
         titulo: "3. ¿Con qué finalidad tratamos tus datos?",
-        contenido: `Usamos tus datos personales para:
-
-- Gestionar tu cuenta de usuario y tu actividad en la plataforma.
-- Facilitar la conexión entre propietarios y arrendatarios.
-- Gestionar reservas, pagos y devoluciones.
-- Tramitar incidencias y coberturas del seguro incluido.
-- Enviarte notificaciones relevantes sobre tu actividad.
-- Mejorar nuestros servicios y la experiencia de usuario.
-- Enviarte comunicaciones comerciales si nos das tu consentimiento.`,
+        contenido: <p>Usamos tus datos personales para:<br/>-Gestionar tu cuenta de usuario y tu actividad en la plataforma.-Facilitar la conexión entre propietarios y arrendatarios.<br/>-Gestionar reservas, pagos y devoluciones.<br/>-Tramitar incidencias y coberturas del seguro incluido.<br/>-Enviarte notificaciones relevantes sobre tu actividad.<br/>-Mejorar nuestros servicios y la experiencia de usuario.<br/>-Enviarte comunicaciones comerciales si nos das tu consentimiento.</p>
     },
     {
         titulo: "4. ¿Cuál es la base legal para el tratamiento de tus datos?",
-        contenido: `- Ejecución de un contrato: para gestionar las reservas y servicios ofrecidos.
-- Consentimiento: para el envío de comunicaciones promocionales o uso de cookies.
-- Interés legítimo: para mejorar nuestros servicios o prevenir fraudes.
-- Obligación legal: para cumplir con normativas fiscales, contables o de protección de datos.`,
+        contenido: <p>-Ejecución de un contrato: para gestionar las reservas y servicios ofrecidos.<br/>-Consentimiento: para el envío de comunicaciones promocionales o uso de cookies.<br/>-Interés legítimo: para mejorar nuestros servicios o prevenir fraudes.<br/>-Obligación legal: para cumplir con normativas fiscales, contables o de protección de datos.</p>,
     },
     {
         titulo: "5. ¿Con quién compartimos tus datos?",
-        contenido: `Solo compartimos datos con terceros cuando es necesario para ofrecer el servicio:
+        contenido: <p>Solo compartimos datos con terceros cuando es necesario para ofrecer el servicio: <br/>-Proveedores de pago y plataformas de gestión de cobros.<br/>-Empresas aseguradoras en caso de siniestros.<br/>-Proveedores tecnológicos que dan soporte a nuestra plataforma.<br/>-Autoridades legales, si así lo exige la ley.
 
-- Proveedores de pago y plataformas de gestión de cobros.
-- Empresas aseguradoras en caso de siniestros.
-- Proveedores tecnológicos que dan soporte a nuestra plataforma.
-- Autoridades legales, si así lo exige la ley.
-
-ONPIK no vende ni cede tus datos a terceros para fines comerciales.`,
+ONPIK no vende ni cede tus datos a terceros para fines comerciales.</p>,
     },
     {
         titulo: "6. ¿Cuánto tiempo conservamos tus datos?",
@@ -53,15 +30,7 @@ ONPIK no vende ni cede tus datos a terceros para fines comerciales.`,
     },
     {
         titulo: "7. ¿Cuáles son tus derechos?",
-        contenido: `Tienes derecho a:
-
-- Acceder a tus datos personales.
-- Solicitar su rectificación o supresión.
-- Limitar u oponerte a su tratamiento.
-- Portar tus datos a otro proveedor.
-- Retirar tu consentimiento en cualquier momento.
-
-Para ejercer tus derechos, puedes escribirnos a privacidad@onpik.com o al correo general de contacto.`,
+        contenido: <p>Tienes derecho a:<br/>-Acceder a tus datos personales.<br/>-Solicitar su rectificación o supresión.<br/>-Limitar u oponerte a su tratamiento.<br/>-Portar tus datos a otro proveedor.<br/>-Retirar tu consentimiento en cualquier momento.<br/>Para ejercer tus derechos, puedes escribirnos a privacidad@onpik.com o al correo general de contacto.</p>
     },
     {
         titulo: "8. Seguridad de los datos",
@@ -69,16 +38,7 @@ Para ejercer tus derechos, puedes escribirnos a privacidad@onpik.com o al correo
     },
     {
         titulo: "9. Uso de Cookies",
-        contenido: `ONPIK utiliza cookies propias y de terceros para:
-
-- Mejorar tu experiencia de navegación.
-- Recordar tus preferencias.
-- Analizar el uso de la plataforma.
-- Mostrarte contenido personalizado y relevante.
-
-Puedes gestionar tus preferencias de cookies desde el banner inicial o a través de la configuración de tu navegador.
-
-Para más información, consulta nuestra Política de Cookies detallada.`,
+        contenido: <p>ONPIK utiliza cookies propias y de terceros para:<br/>-Mejorar tu experiencia de navegación.<br/>-Recordar tus preferencias.<br/>-Analizar el uso de la plataforma.<br/>-Mostrarte contenido personalizado y relevante.<br/>Puedes gestionar tus preferencias de cookies desde el banner inicial o a través de la configuración de tu navegador.</p>,
     },
     {
         titulo: "10. Cambios en esta política",
@@ -98,23 +58,23 @@ export default function PoliticaPrivacidad() {
     };
 
     return (
-        <div className="max-w-3xl mx-auto p-4">
-            <h2 className="text-2xl font-bold mb-6 text-center">Política de Privacidad y cookies</h2>
-            {seccionesPoli.map((seccion, index) => (
-                <div key={index} className="mb-4 border rounded overflow-hidden">
-                    <button
-                        onClick={() => toggle(index)}
-                        className="w-full text-left p-4 font-semibold bg-gray-100 hover:bg-gray-200"
-                    >
-                        {seccion.titulo}
-                    </button>
-                    {activo === index && (
-                        <div className="p-4 bg-white whitespace-pre-line">
+        <>
+            <div className="Contenedor-acordeon">
+                <h2 className="Contenedor-titulo">Política de Privacidad y Cookies:</h2>
+                {seccionesPoli.map((seccion, index) => (
+                    <div key={index} className="Contenedor-seccion">
+                        <button
+                            onClick={() => toggle(index)}
+                            className="Contenedor-btn"
+                        >
+                            {seccion.titulo}
+                        </button>
+                        <div className={`Contenedor-content ${activo === index ? 'activo' : ''}`}>
                             {seccion.contenido}
                         </div>
-                    )}
-                </div>
-            ))}
-        </div>
+                    </div>
+                ))}
+            </div>
+        </>
     );
 }

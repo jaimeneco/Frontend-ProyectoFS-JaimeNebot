@@ -1,0 +1,41 @@
+.Contenedor-acordeon {
+    padding: 10px;
+}
+
+.Contenedor-titulo {
+    font-size: 2.5rem;
+    font-family: Oswald, sans-serif;
+    padding: 20px 10px;
+}
+
+.Contenedor-seccion {
+    margin-bottom: 10px;
+}
+
+.Contenedor-btn {
+    font-family: Oswald, sans-serif;
+    font-size: 1.1rem;
+    width: 100%;
+    text-align: left;
+    padding: 10px;
+    font-weight: 600;
+    border-radius: 10px;
+    background-color: #fff;
+    transition: background-color 0.3s;
+}
+
+.Contenedor-btn:hover {
+    background-color: #202020;
+    color: #fff
+}
+
+.Contenedor-content {
+    padding: 16px;
+    border-radius: 20px;
+    background-color: #fff;
+    display: none;
+}
+
+.Contenedor-content.activo {
+    display: block;
+}
