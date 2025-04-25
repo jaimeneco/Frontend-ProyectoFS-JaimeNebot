@@ -1,68 +1,73 @@
-.carrusel {
-    overflow: hidden;
-    width: 600px;
-    margin: 0 auto;
+.Carrusel {
     position: relative;
-}
-
-.carrusel-container {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
     width: 100%;
+    max-width: 20%;
+    max-height: auto;
+    margin: 0 auto;
+    overflow: hidden;
+    font-family: 'Oswald', sans-serif;
 }
 
-.carrusel-slide {
+.Carrusel-track {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.Carrusel-slide {
     min-width: 100%;
     box-sizing: border-box;
+    padding: 1rem;
 }
 
-.carrusel-slide img {
-    width: 100%;
+.Carrusel-img {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.Carrusel-img img {
     display: block;
+    width: 100%;
+    height: 50%;
+    height: auto;
 }
 
-.carrusel-controls {
+.Carrusel-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 0.5rem;
+    box-sizing: border-box;
+    border-top: 2px solid #fff;
+    color: #fff;
+    text-align: center;
+}
+
+.Nav-button {
     position: absolute;
     top: 50%;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
     transform: translateY(-50%);
-    padding: 0 10px;
-    pointer-events: none; /* para que no interfiera el contenedor */
-}
-
-.carrusel-controls button {
-    pointer-events: auto; /* permite click en los botones */
-    background-color: rgba(0, 0, 0, 0.5);
+    background: #fff;
     border: none;
-    color: white;
-    padding: 10px;
-    cursor: pointer;
-    border-radius: 5px;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
-}
-
-.carrusel-controls button:hover {
-    background-color: rgba(0, 0, 0, 0.7);
-}
-
-.carrusel-indicators {
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
-}
-
-.carrusel-indicators button {
-    margin: 0 5px;
-    padding: 5px;
+    padding: 0.5rem;
     border-radius: 50%;
-    border: none;
-    background-color: #ccc;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
     cursor: pointer;
+    font-size: 1.5rem;
+    line-height: 1;
 }
 
-.carrusel-indicators .active {
-    background-color: #008080;
+.Nav-button.prev {
+    left: 1rem;
+}
+
+.Nav-button.next {
+    right: 1rem;
+}
+
+.Nav-button:hover {
+    background: #f0f0f0;
 }

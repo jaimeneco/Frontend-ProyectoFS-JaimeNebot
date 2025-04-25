@@ -22,11 +22,11 @@ export const Mountain = () => {
                     </div>
                 </div>
                 <div className='Main-carrusel'>
-                    <p className='Carrusel-text'>¡A la montaña 100% equipado!</p>
+                    <p className='Carrusel-title'>¡A la montaña 100% equipado!</p>
                     <Carrusel images={images} autoPlay={false} />
                 </div>
-                <div className='Main-productos'>
-                    <p className='Productos-text'>Snowboard:</p>
+                <div id='snow' className='Main-productos'>
+                    <p className='Productos-text' >Snowboard:</p>
                     <div className='Productos-img'></div>
                     <img src="https://dummyjson.com/image/200x300/008080/ffffff?text=Imagen+1" alt="" />
                     <img src="https://dummyjson.com/image/200x300/008080/ffffff?text=Imagen+1" alt="" />

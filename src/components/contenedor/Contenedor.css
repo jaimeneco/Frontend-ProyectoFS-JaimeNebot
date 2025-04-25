@@ -1,0 +1,39 @@
+.Contenedor-imgs {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 1400px;
+    margin: 5px auto;
+}
+
+.Img-card {
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    margin: 10px;
+}
+
+.Img-card img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.Text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    text-align: center;
+    font-family: "Oswald", sans-serif;
+    font-size: 1.5rem;
+}
+
+.Img-card:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+    filter: brightness(85%);
+}

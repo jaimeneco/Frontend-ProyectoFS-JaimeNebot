@@ -46,6 +46,7 @@ export const FormInicio = () => {
 
                     <button className='Button' type="submit">Iniciar sesión</button>
                     <p>Si no tienes cuenta, <NavLink to="/registro"> ¡regístrate aquí!</NavLink></p>
+                    
                 </fieldset>
             </form>
         </main>
