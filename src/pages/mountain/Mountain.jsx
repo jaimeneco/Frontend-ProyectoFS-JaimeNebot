@@ -22,7 +22,7 @@ export const Mountain = () => {
                     </div>
                 </div>
                 <div className='Main-carrusel'>
-                    <p className='Carrusel-title'>¡A la montaña 100% equipado!</p>
+                    <p className='Carrusel-title'>EN LA MONTAÑA... <br/> ¡SIEMPRE BIEN EQUIPADO!</p>
                     <Carrusel images={images} autoPlay={false} />
                 </div>
                 <div id='snow' className='Main-productos'>

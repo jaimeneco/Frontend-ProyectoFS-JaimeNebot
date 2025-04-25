@@ -17,8 +17,10 @@
 
 .Carrusel-title {
     align-content: center;
+    text-align: center;
     font-family: Oswald, sans-serif;
     font-size: 5rem;
+    font-weight: 900;
     color: #fff;
     padding:  30px 30px 30px 100px;
 }

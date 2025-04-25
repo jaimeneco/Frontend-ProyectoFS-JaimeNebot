@@ -22,7 +22,7 @@ export const Sea = () => {
                     </div>
                 </div>
                 <div className='Main-carrusel'>
-                    <p className='Carrusel-title'>¡Todo para meterte al agua!</p>
+                    <p className='Carrusel-title'>TODO LO NECESARIO <br/> PARA METERTE <br/>AL AGUA</p>
                     <Carrusel images={images} autoPlay={false} />
                 </div>
                 <div className='Main-productos'>

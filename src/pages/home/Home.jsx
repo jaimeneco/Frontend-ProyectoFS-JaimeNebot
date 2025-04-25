@@ -27,23 +27,3 @@ export const Home = () => {
 
     );
 }
-
-// export const Grid = () => {
-//     return (
-//         <div className="grid-container">
-//             {products.map((product) => (
-//                 <div key={product.id} className="card">
-//                     <img src={product.img} alt={product.title} className="card-img" />
-//                     <h3 className="card-title">{product.title}</h3>
-//                     <p className="card-availability">
-//                         Disponibilidad:{" "}
-//                         <span className={product.available ? "available" : "not-available"}>
-//                             {product.available ? "Disponible" : "No disponible"}
-//                         </span>
-//                     </p>
-//                     <p className="card-price">{product.price}</p>
-//                 </div>
-//             ))}
-//         </div>
-//     );
-// };
