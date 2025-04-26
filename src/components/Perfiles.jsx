@@ -3,7 +3,6 @@ const PerfilOne = {
     "nombre": "Jaime Nebot",
     "email": "jaime@example.com",
     "username": "jaimecode",
-    "avatar": "https://example.com/avatar.jpg",
     "telefono": "+34 600 123 456",
     "direccion": {
         "calle": "Calle Falsa 123",
@@ -12,16 +11,8 @@ const PerfilOne = {
         "codigoPostal": "46001",
         "pais": "España"
     },
-    "fechaNacimiento": "1990-05-15",
-    "genero": "masculino",
     "rol": "usuario",
     "fechaRegistro": "2023-10-01T10:30:00Z",
-    "ultimaConexion": "2025-04-21T14:10:00Z",
-    "preferencias": {
-        "idioma": "es",
-        "tema": "oscuro",
-        "newsletter": true
-    },
     "historialCompras": [
         {
             "idCompra": "ORD-0001",
@@ -43,7 +34,6 @@ const PerfilTwo = {
     "nombre": "Carlos Herrera",
     "email": "carlos.herrera@example.com",
     "username": "charlieH",
-    "avatar": "https://example.com/avatar-carlos.jpg",
     "telefono": "+34 698 112 233",
     "direccion": {
         "calle": "Paseo del Río 45",
@@ -52,16 +42,8 @@ const PerfilTwo = {
         "codigoPostal": "48009",
         "pais": "España"
     },
-    "fechaNacimiento": "1988-03-22",
-    "genero": "masculino",
     "rol": "usuario",
     "fechaRegistro": "2023-07-10T15:20:00Z",
-    "ultimaConexion": "2025-04-20T17:25:00Z",
-    "preferencias": {
-        "idioma": "es",
-        "tema": "claro",
-        "newsletter": false
-    },
     "historialCompras": [
         {
             "idCompra": "ORD-0045",
