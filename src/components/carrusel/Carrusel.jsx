@@ -70,11 +70,11 @@ import './Carrusel.css';
 
 export function Carrusel() {
     const products = [
-    { id: 1, title: 'Tabla Surf Alpha', marca: 'Quiksilver', type: 'surf', price: '20€/día', img: 'public/imgs/img-kite-1.png' },
-    { id: 2, title: 'Tabla Surf WaveX', marca: 'Billabong', type: 'surf', price: '22€/día', img: 'public/imgs/img-kite-2.png' },
-    { id: 3, title: 'Tabla Surf Flow',   marca: 'Rip Curl',    type: 'surf', price: '18€/día', img: 'public/imgs/img-kite-3.png' },
-    { id: 4, title: 'Tabla Surf Oceanic', marca: 'Hurley',      type: 'surf', price: '21€/día', img: 'public/imgs/img-kite-4.png' },
-    { id: 5, title: 'Tabla Surf Hydra',   marca: "O'Neill",    type: 'surf', price: '19€/día', img: 'public/imgs/img-kite-5.png' },
+    { id: 1, title: 'Tabla Surf Alpha', marca: 'Quiksilver', type: 'surf', price: '20€/día', img: '/imgs/img-kite-1.png' },
+    { id: 2, title: 'Tabla Surf WaveX', marca: 'Billabong', type: 'surf', price: '22€/día', img: '/imgs/img-kite-2.png' },
+    { id: 3, title: 'Tabla Surf Flow',   marca: 'Rip Curl',    type: 'surf', price: '18€/día', img: '/imgs/img-kite-3.png' },
+    { id: 4, title: 'Tabla Surf Oceanic', marca: 'Hurley',      type: 'surf', price: '21€/día', img: '/imgs/img-kite-4.png' },
+    { id: 5, title: 'Tabla Surf Hydra',   marca: "O'Neill",    type: 'surf', price: '19€/día', img: '/imgs/img-kite-5.png' },
     ];
 
         const [current, setCurrent] = useState(0);

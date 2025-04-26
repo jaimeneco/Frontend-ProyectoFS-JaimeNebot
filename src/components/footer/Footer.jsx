@@ -17,10 +17,10 @@ export const Footer = () => {
                             <NavLink className="Footer-navLink" to='/aboutus' title='Ir a About us'>About us</NavLink>
                         </li>
                         <li className="Footer-navLink">
-                        <NavLink className="Footer-navLink" to='/login' title='Ir a usuario'><img src="public/imgs/img-header/img-perfil.png" alt="Ir al perfil"/></NavLink>
+                        <NavLink className="Footer-navLink" to='/login' title='Ir a usuario'><img src="/imgs/img-header/img-perfil.png" alt="Ir al perfil"/></NavLink>
                         </li>
                         <li className="Footer-navLink">
-                        <NavLink className="Footer-navLink" to='/compras' title='Ir a compras'><img src="public/imgs/img-header/img-compras.png" alt="Ir a compras"/></NavLink>
+                        <NavLink className="Footer-navLink" to='/compras' title='Ir a compras'><img src="/imgs/img-header/img-compras.png" alt="Ir a compras"/></NavLink>
                         
                         </li>
                     </ul>
@@ -29,7 +29,7 @@ export const Footer = () => {
                 <div className="Footer-content">
                     <div className="Footer-logo">
                         <NavLink to="/">
-                            <img src="public/imgs/img-footer/logo-footer.png" alt="Logotipo ONPIK" title='ONPIK' className="Footer-logoImage" loading='lazy' />
+                            <img src="/imgs/img-footer/logo-footer.png" alt="Logotipo ONPIK" title='ONPIK' className="Footer-logoImage" loading='lazy' />
                         </NavLink>
                     </div>
 

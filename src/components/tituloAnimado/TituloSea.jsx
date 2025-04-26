@@ -15,7 +15,7 @@ export const TituloSea = () => {
 
     return (
         <div className="Contenedor-img">
-            <img src='public/imgs/img-moun-sea/img-sea.jpg' alt="Fondo mar" className="Img-sea" />
+            <img src='/imgs/img-moun-sea/img-sea.jpg' alt="Fondo mar" className="Img-sea" />
             <h1 ref={tituloRef} className="TituloAnimado-sea">
                 CON ONPIK DISFRUTARÁS <br/> COMO NUNCA DE TU <br/> TIEMPO EN EL AGUA...
             </h1>
