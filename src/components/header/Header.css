@@ -46,3 +46,57 @@ CSS HEADER GENERAL
     text-decoration: underline;
     text-decoration-thickness: 3px;
 }
+
+/* Tablet: 768px a 1024px */
+@media (max-width: 1024px) {
+    .Header {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+    }
+
+    .Header-logoImage {
+        width: 250px;
+        padding: 20px;
+    }
+
+    .Header-navList {
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+
+    .Header-navLink {
+        padding: 15px;
+        font-size: 1.2rem;
+    }
+}
+
+/* Móvil: menos de 768px */
+@media (max-width: 768px) {
+    .Header {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 0;
+    }
+
+    .Header-logoImage {
+        width: 200px;
+        padding: 10px;
+    }
+
+    .Header-navList {
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+
+    .Header-navLink {
+        padding: 10px;
+        font-size: 1.1rem;
+    }
+
+    .Header-navLink img {
+        width: 20px;
+    }
+}

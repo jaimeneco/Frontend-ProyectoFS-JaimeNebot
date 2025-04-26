@@ -22,18 +22,18 @@ export const Sea = () => {
                     </div>
                 </div>
                 <div className='Main-carrusel'>
-                    <p className='Carrusel-title'>TODO LO NECESARIO <br/> PARA METERTE <br/>AL AGUA</p>
+                    <p className='Carrusel-title'>TODO LO NECESARIO <br /> PARA METERTE <br />AL AGUA</p>
                     <Carrusel images={images} autoPlay={false} />
                 </div>
                 <div className='Main-productos'>
                     <p className='Productos-text'>Surfboard:</p>
-                    <div className='Productos-img'></div>
-                    <img src="https://dummyjson.com/image/200x300/008080/ffffff?text=Imagen+1" alt="" />
-                    <img src="https://dummyjson.com/image/200x300/008080/ffffff?text=Imagen+1" alt="" />
-                    <img src="https://dummyjson.com/image/200x300/008080/ffffff?text=Imagen+1" alt="" />
-                    <img src="https://dummyjson.com/image/200x300/008080/ffffff?text=Imagen+1" alt="" />
-                    <img src="https://dummyjson.com/image/200x300/008080/ffffff?text=Imagen+1" alt="" />
-
+                    <div className='Productos-img'>
+                        <img src="https://dummyjson.com/image/200x300/008080/ffffff?text=Imagen+1" alt="" />
+                        <img src="https://dummyjson.com/image/200x300/008080/ffffff?text=Imagen+1" alt="" />
+                        <img src="https://dummyjson.com/image/200x300/008080/ffffff?text=Imagen+1" alt="" />
+                        <img src="https://dummyjson.com/image/200x300/008080/ffffff?text=Imagen+1" alt="" />
+                        <img src="https://dummyjson.com/image/200x300/008080/ffffff?text=Imagen+1" alt="" />
+                    </div>
                     <p className='Productos-text'>Kitesurf:</p>
                     <div className='Productos-img'>
                         <img src="https://dummyjson.com/image/200x300/008080/ffffff?text=Imagen+1" alt="" />

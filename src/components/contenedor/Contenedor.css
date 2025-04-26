@@ -37,3 +37,31 @@
     transition: transform 0.3s ease;
     filter: brightness(85%);
 }
+
+/* Tablet */
+@media (max-width: 1024px) {
+    .Contenedor-imgs {
+        grid-template-columns: 1fr;
+        /* Solo una columna */
+    }
+
+    .Text {
+        font-size: 1.2rem;
+        padding: 15px;
+    }
+}
+
+/* Móvil */
+@media (max-width: 768px) {
+    .Contenedor-imgs {
+        grid-template-columns: 1fr;
+        /* Sigue 1 columna */
+        padding: 0 10px;
+        /* Un poco de espacio a los lados */
+    }
+
+    .Text {
+        font-size: 1rem;
+        padding: 10px;
+    }
+}

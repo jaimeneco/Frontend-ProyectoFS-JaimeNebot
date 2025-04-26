@@ -3,3 +3,51 @@
     font-size: 2rem;
     padding: 30px;
 }
+
+/* Estilos generales (PC y Tablet) */
+.Productos-img {
+    display: flex;
+    flex-wrap: wrap;
+    /* Por si hay más imágenes que espacio */
+    justify-content: center;
+    gap: 20px;
+    /* Espacio entre imágenes */
+    padding: 20px 0;
+}
+
+.Productos-img img {
+    width: 200px;
+    /* O el tamaño que prefieras */
+    height: auto;
+    object-fit: cover;
+}
+
+/* Tablet (menos de 1024px) */
+@media (max-width: 1024px) {
+    .Productos-img {
+        gap: 15px;
+    }
+
+    .Productos-img img {
+        width: 180px;
+        /* Un pelín más pequeño para tablets */
+    }
+}
+
+/* Móvil (menos de 768px) */
+@media (max-width: 768px) {
+    .Productos-img {
+        flex-direction: column;
+        /* Columnas en vez de fila */
+        align-items: center;
+        /* Centrar las imágenes */
+        gap: 20px;
+    }
+
+    .Productos-img img {
+        width: 80%;
+        /* Que ocupen la mayor parte del ancho pero no el 100% */
+        max-width: 300px;
+        /* Máximo para que no se estiren demasiado */
+    }
+}

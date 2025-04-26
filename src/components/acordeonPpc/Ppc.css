@@ -10,6 +10,7 @@
 
 .Contenedor-seccion {
     margin-bottom: 10px;
+    font-family: 'Lucida Sans', sans-serif;
 }
 
 .Contenedor-btn {
@@ -38,4 +39,43 @@
 
 .Contenedor-content.activo {
     display: block;
+}
+
+/* Tablet: 768px a 1024px */
+@media (max-width: 1024px) {
+    .Contenedor-titulo {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .Contenedor-btn {
+        font-size: 1rem;
+        padding: 8px;
+    }
+
+    .Contenedor-content {
+        padding: 12px;
+    }
+}
+
+/* Móvil: menos de 768px */
+@media (max-width: 768px) {
+    .Contenedor-acordeon {
+        padding: 5px;
+    }
+
+    .Contenedor-titulo {
+        font-size: 1.8rem;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .Contenedor-btn {
+        font-size: 0.95rem;
+        padding: 8px;
+    }
+
+    .Contenedor-content {
+        padding: 10px;
+    }
 }

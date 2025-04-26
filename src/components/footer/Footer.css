@@ -1,4 +1,3 @@
-
 .Footer {
     display: flex;
     width: 100%;
@@ -10,14 +9,14 @@
 }
 
 /* CSS FOOTER NAVEGACIÓN */
-.Footer-nav{
+.Footer-nav {
     display: flex;
     flex-direction: column;
     padding: 0px;
     font-family: "Oswald", sans-serif;
 }
 
-.Footer-navList{
+.Footer-navList {
     display: flex;
     flex-direction: column;
     list-style: none;
@@ -51,7 +50,7 @@
 }
 
 /* CSS FOOTER CONTENIDO */
-.Footer-content{
+.Footer-content {
     display: flex;
     flex-direction: column;
     padding: 0px 10px 10px;
@@ -60,24 +59,96 @@
 }
 
 /* CSS FOOTER COPYRIGHT */
-.Footer-text{
+.Footer-text {
     font-family: "Oswald", sans-serif;
     font-size: large;
-    
+
 }
 
 /* CSS FOOTER TÉRMINOS Y CONDICIONES */
-.Footer-textLink{
+.Footer-textLink {
     font-family: "Oswald", sans-serif;
     font-size: large;
     text-decoration: none;
-    color:#fff;
+    color: #fff;
     padding-top: 10px;
 }
 
-.Footer-textLink:hover{
+.Footer-textLink:hover {
     text-decoration: underline;
     text-decoration-color: #F1ECE7;
     text-decoration-thickness: 3px;
     transform: scale(1.1);
+}
+
+/* Tablet: 768px a 1024px */
+@media (max-width: 1024px) {
+    .Footer {
+        flex-direction: column;
+        align-items: center;
+        padding: 40px 20px;
+        text-align: center;
+    }
+
+    .Footer-logoImage {
+        width: 300px;
+        margin-bottom: 20px;
+    }
+
+    .Footer-nav {
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    .Footer-navList {
+        align-items: center;
+    }
+
+    .Footer-navLink {
+        font-size: 1.2rem;
+    }
+
+    .Footer-content {
+        align-items: center;
+        text-align: center;
+    }
+}
+
+/* Móvil: menos de 768px */
+@media (max-width: 768px) {
+    .Footer {
+        flex-direction: column;
+        align-items: center;
+        padding: 30px 15px;
+        text-align: center;
+    }
+
+    .Footer-logoImage {
+        width: 250px;
+        margin-bottom: 20px;
+    }
+
+    .Footer-nav {
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    .Footer-navList {
+        align-items: center;
+    }
+
+    .Footer-navLink {
+        font-size: 1.1rem;
+        padding: 8px;
+    }
+
+    .Footer-content {
+        align-items: center;
+        text-align: center;
+    }
+
+    .Footer-text,
+    .Footer-textLink {
+        font-size: 1rem;
+    }
 }

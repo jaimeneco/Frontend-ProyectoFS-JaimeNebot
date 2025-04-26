@@ -71,3 +71,19 @@
 .Nav-button:hover {
     background: #f0f0f0;
 }
+
+@media (max-width: 768px) {
+    .Carrusel {
+        max-width: 90%;
+    }
+
+    .Carrusel-text {
+        font-size: 1rem;
+        padding: 0.3rem;
+    }
+
+    .Nav-button {
+        padding: 0.3rem;
+        font-size: 1.2rem;
+    }
+}

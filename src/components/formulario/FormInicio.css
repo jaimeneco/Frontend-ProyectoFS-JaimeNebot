@@ -51,3 +51,44 @@
 .Button[type="submit"]:hover {
     background-color: #333;
 }
+
+/* Tablet: menos de 1024px */
+@media (max-width: 1024px) {
+    .Main-form {
+        max-width: 90%; /* Aumenta el tamaño en tablets */
+        padding: 30px;
+    }
+
+    .Fieldset-label {
+        font-size: 1.2rem; /* Reduce un poco el tamaño de las etiquetas */
+    }
+
+    .Fieldset-input {
+        font-size: 0.9rem; /* Ajusta el tamaño del input */
+    }
+
+    .Button {
+        font-size: 0.9rem; /* Ajusta el tamaño del botón */
+    }
+}
+
+/* Móvil: menos de 768px */
+@media (max-width: 768px) {
+    .Main-form {
+        max-width: 95%; /* Más espacio para móviles */
+        padding: 20px;
+    }
+
+    .Fieldset-label {
+        font-size: 1rem; /* Ajusta más el tamaño de las etiquetas */
+    }
+
+    .Fieldset-input {
+        font-size: 0.9rem; /* Ajusta más el tamaño del input */
+    }
+
+    .Button {
+        padding: 15px;
+        font-size: 0.9rem; /* Ajusta el tamaño del botón */
+    }
+}

@@ -1,6 +1,9 @@
 .Main-login {
     align-items: center;
-    align-content: center;
+    /* align-content: center; */
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0px 00px 0px;
 }
 
 

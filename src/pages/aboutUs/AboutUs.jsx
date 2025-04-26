@@ -12,7 +12,7 @@ export const AboutUs = () => {
                     <img className='img' src="./src/public/imgs/img-aboutUs/img-aboutPrincipal.jpg" alt="Imagen ONPIK" />
                 </div>
                 <div className='Content-historia'>
-                    <img className='Content-img' src="./src/public/imgs/img-aboutUs/img-aboutFir.jpg" alt="" />
+                    <img className='Content-img' src="./src/public/imgs/img-aboutUs/img-aboutFir.jpg" alt="Imagen historia" />
                     <div className='Content-info'>
                         <p className='Content-title'>Nuestra historia:</p>
                         <p className='Content-text'>Todo empezó con una tabla y un sueño. Un grupo de amigos, locos por el mar y la montaña, que vivían para perseguir olas al amanecer y deslizarse por la nieve al caer la tarde. </p>
@@ -24,7 +24,7 @@ export const AboutUs = () => {
                 </div>
 
                 <div className='Content-valores'>
-                    <img className='Content-img' src="./src/public/imgs/img-aboutUs/img-aboutSec.png" alt="" />
+                    <img className='Content-img' src="./src/public/imgs/img-aboutUs/img-aboutSec.png" alt="Imagen valores" />
                     <div className='Content-info'>
                         <p className='Content-title'>Nuestros valores:</p>
                         <p className='Content-text'><b>-LIBERTAD:</b> Creemos en el poder de deslizarnos para desconectar del ruido y reconectar con lo esencial. Ya sea surfeando una ola o trazando líneas sobre nieve virgen, cada movimiento es una declaración de libertad. La tabla es nuestra forma de volar, de expresarnos sin límites, de dejar que el cuerpo hable cuando sobran las palabras.</p>

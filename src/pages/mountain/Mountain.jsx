@@ -15,25 +15,25 @@ export const Mountain = () => {
     return (
         <>
             <Header />
-            <main>
+            <main className='Main-mountain'>
                 <div className='Main-content'>
                     <div className='Content-left'>
-                        <TituloMountain/>
+                        <TituloMountain />
                     </div>
                 </div>
                 <div className='Main-carrusel'>
-                    <p className='Carrusel-title'>EN LA MONTAÑA... <br/> ¡SIEMPRE BIEN EQUIPADO!</p>
+                    <p className='Carrusel-title'>EN LA MONTAÑA... <br /> ¡SIEMPRE BIEN EQUIPADO!</p>
                     <Carrusel images={images} autoPlay={false} />
                 </div>
                 <div id='snow' className='Main-productos'>
                     <p className='Productos-text' >Snowboard:</p>
-                    <div className='Productos-img'></div>
-                    <img src="https://dummyjson.com/image/200x300/008080/ffffff?text=Imagen+1" alt="" />
-                    <img src="https://dummyjson.com/image/200x300/008080/ffffff?text=Imagen+1" alt="" />
-                    <img src="https://dummyjson.com/image/200x300/008080/ffffff?text=Imagen+1" alt="" />
-                    <img src="https://dummyjson.com/image/200x300/008080/ffffff?text=Imagen+1" alt="" />
-                    <img src="https://dummyjson.com/image/200x300/008080/ffffff?text=Imagen+1" alt="" />
-
+                    <div className='Productos-img'>
+                        <img src="https://dummyjson.com/image/200x300/008080/ffffff?text=Imagen+1" alt="" />
+                        <img src="https://dummyjson.com/image/200x300/008080/ffffff?text=Imagen+1" alt="" />
+                        <img src="https://dummyjson.com/image/200x300/008080/ffffff?text=Imagen+1" alt="" />
+                        <img src="https://dummyjson.com/image/200x300/008080/ffffff?text=Imagen+1" alt="" />
+                        <img src="https://dummyjson.com/image/200x300/008080/ffffff?text=Imagen+1" alt="" />
+                    </div>
                     <p className='Productos-text'>Ski:</p>
                     <div className='Productos-img'>
                         <img src="https://dummyjson.com/image/200x300/008080/ffffff?text=Imagen+1" alt="" />
