@@ -15,7 +15,7 @@ export const TituloMountain = () => {
 
     return (
         <div className="Contenedor-img">
-            <img src='./src/public/imgs/img-moun-sea/img-mountain.jpg' alt="Fondo montaña" className="Img-mountain" />
+            <img src='public/imgs/img-moun-sea/img-mountain.jpg' alt="Fondo montaña" className="Img-mountain" />
             <h1 ref={tituloRef} className="TituloAnimado-mountain">
                 VIVE CON NOSOTROS <br/> TODA  LA EMOCIÓN <br/> DE LA MONTAÑA...
             </h1>

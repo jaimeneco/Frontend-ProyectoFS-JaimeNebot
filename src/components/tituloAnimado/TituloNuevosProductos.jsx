@@ -15,7 +15,7 @@ export const TituloNuevosProductos = () => {
 
     return (
         <div className="Contenedor-img">
-            <img src='./src/public/imgs/img-home/img-landingMore.jpg' alt="Img nuevos productos" className="Img-nuevos" />
+            <img src='public/imgs/img-home/img-landingMore.jpg' alt="Img nuevos productos" className="Img-nuevos" />
             <h1 ref={tituloRef} className="TituloAnimado-nuevos">
                 Más deportes próximamente...
             </h1>
