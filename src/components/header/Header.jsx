@@ -25,7 +25,7 @@ export const Header = () => {
                             <NavLink className="Header-navLink" to='/login' title='Ir a login'><img src="/imgs/img-header/img-perfil.png" alt="Ir al perfil"/></NavLink>
                         </li>
                         <li className="Header-navLink">
-                            <NavLink className="Header-navLink" to='/compras' title='Ir a compras'><img src="/imgs/img-header/img-compras.png" alt="Ir a compras"/></NavLink>
+                            <NavLink className="Header-navLink" to='https://www.instagram.com/jaimenebot/?hl=es' title='Ir a Instagram'><img src="/imgs/img-footer/img-instagram.png" alt="Ir a Instagram"/></NavLink>
                         </li>
                     </ul>
                 </nav>
