@@ -1,17 +1,15 @@
-// import { useState } from 'react'
-import './App.css'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 // Pages
-import { Login } from '../src/pages/login/Login'
-import { Home } from '../src/pages/home/Home'
-import { Mountain } from '../src/pages/mountain/Mountain'
-import { Sea } from '../src/pages/sea/Sea'
-import { AboutUs } from '../src/pages/aboutUs/AboutUs'
-import { Usuario } from '../src/pages/usuario/Usuario'
-import {Error} from '../src/pages/error/Error'
-import { Terminos } from '../src/pages/terminos/Terminos'
-import { Privacidad } from '../src/pages/privacidad/Privacidad'
+import { Login } from './pages/login/Login'
+import { Home } from './pages/home/Home'
+import { Mountain } from './pages/mountain/Mountain'
+import { Sea } from './pages/sea/Sea'
+import { AboutUs } from './pages/aboutUs/AboutUs'
+import { Usuario } from './pages/usuario/Usuario'
+import {Error} from './pages/error/Error'
+import { Terminos } from './pages/terminos/Terminos'
+import { Privacidad } from './pages/privacidad/Privacidad'
 
 
 
