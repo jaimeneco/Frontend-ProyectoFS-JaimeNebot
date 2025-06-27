@@ -1,13 +1,14 @@
-import './Login.css';
+import './Welcome.css';
 import { Header } from '../../components/header/Header'
 import { Footer } from '../../components/footer/Footer'
 import { FormInicio } from '../../components/formulario/FormInicio';
+// import { Registro } from '../registro/Registro';
 
 
-import { useNavigate } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 
-export const Login = () => {
+export const Welcome = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState('')
@@ -54,9 +55,9 @@ export const Login = () => {
             } else {
                 setError("No ha llegado el token")
             }
-            
-            console.log('email:',email)
-            console.log('password:',password)
+
+            console.log('email:', email)
+            console.log('password:', password)
             console.log('logeado')
 
         } catch (e) {
@@ -68,23 +69,36 @@ export const Login = () => {
 
     return (
         <>
-            <Header />
             <main className="Main-login">
-                    <h1 className="Main-formTitle">Inicio de sesión</h1>
-                    <div className='Login-divForm'>
-                        <FormInicio
-                            email={email}
-                            password={password}
-                            setEmail={setEmail}
-                            setPassword={setPassword}
-                            handleLogin={handleLogin}
-                        />
-                        {error && (
-                            <div className='Login-error'>{error}
-                            </div>)}
-                    </div>
+                <div className='Logo-grande'>
+                    <img src="./imgs/logo.png" alt="" />
+                </div>
+                <h1 className="Main-formTitle">Inicio de sesión</h1>
+                <div className='Login-divForm'>
+                    <FormInicio
+                        email={email}
+                        password={password}
+                        setEmail={setEmail}
+                        setPassword={setPassword}
+                        handleLogin={handleLogin}
+                    />
+                    {error && (
+                        <div className='Login-error'>{error}
+                        </div>)}
+                </div>
+                <div className='Registro-inicio'>¿No tienes cuenta? <NavLink to='/registro' >¡Créala aquí! </NavLink></div>
             </main>
-            <Footer />
+            <ul className="Footer-navList">
+                <li className="Footer-text">
+                    <p>© 2025 ONPIK - Todos los derechos reservados</p>
+                </li>
+                <li className="Footer-textLink">
+                    <NavLink className="Footer-navLink" to='/terminos'>Términos y condiciones</NavLink>
+                </li>
+                <li className="Footer-textLink">
+                    <NavLink className="Footer-navLink" to='/privacidad'>Política de privacidad y cookies</NavLink>
+                </li>
+            </ul>
         </>
     );
 }

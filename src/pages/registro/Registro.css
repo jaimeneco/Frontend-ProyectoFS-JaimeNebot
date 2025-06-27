@@ -1,0 +1,14 @@
+.Main-registro {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0px 00px 0px;
+}
+
+.Main-formTitle{
+    font-family: Oswald, sans-serif;
+    font-size: 2rem;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
