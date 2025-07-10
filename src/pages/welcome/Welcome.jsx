@@ -1,8 +1,6 @@
 import './Welcome.css';
-import { Header } from '../../components/header/Header'
-import { Footer } from '../../components/footer/Footer'
 import { FormInicio } from '../../components/formulario/FormInicio';
-// import { Registro } from '../registro/Registro';
+import { Registro } from '../registro/Registro';
 
 
 import { NavLink, useNavigate } from 'react-router-dom';
