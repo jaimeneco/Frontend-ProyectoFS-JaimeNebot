@@ -1,6 +1,7 @@
 import './Welcome.css';
 import { FormInicio } from '../../components/formulario/FormInicio';
 import { Registro } from '../registro/Registro';
+import CarruselVertical from '../../components/carrusel/CarruselVertical'
 
 
 import { NavLink, useNavigate } from 'react-router-dom';
@@ -67,34 +68,41 @@ export const Welcome = () => {
 
     return (
         <>
-            <main className="Main-login">
-                <div className='Logo-grande'>
-                    <img src="./imgs/logo.png" alt="" />
+            <main className='Welcome-main'>
+                <div className='Welcome-carrusel'>
+                    <CarruselVertical />
                 </div>
-                <h1 className="Main-formTitle">Inicio de sesión</h1>
-                <div className='Login-divForm'>
-                    <FormInicio
-                        email={email}
-                        password={password}
-                        setEmail={setEmail}
-                        setPassword={setPassword}
-                        handleLogin={handleLogin}
-                    />
-                    {error && (
-                        <div className='Login-error'>{error}
-                        </div>)}
+                <div className="Main-login">
+                    <div className='Logo-grande'>
+                        <img src="./imgs/logo.png" alt="" />
+                        <p className='Logo-text'>¡Tu tienda de alquiler deportivo!</p>
+                    </div>
+                    <h1 className="Main-formTitle">INICIO DE SESIÓN</h1>
+                    <div className='Login-divForm'>
+                        <FormInicio
+                            email={email}
+                            password={password}
+                            setEmail={setEmail}
+                            setPassword={setPassword}
+                            handleLogin={handleLogin}
+                        />
+                        {error && (
+                            <div className='Login-error'>{error}
+                            </div>)}
+                    </div>
+                    <div className='WelcomeRegistro-inicio'>¿No tienes cuenta? <NavLink to='/registro' className='WelcomeLink-registro'>¡CRÉALA AQUÍ! </NavLink></div>
                 </div>
-                <div className='Registro-inicio'>¿No tienes cuenta? <NavLink to='/registro' >¡Créala aquí! </NavLink></div>
             </main>
-            <ul className="Footer-navList">
-                <li className="Footer-text">
-                    <p>© 2025 ONPIK - Todos los derechos reservados</p>
+            <ul className="WelcomeFooter-navList">
+                <li>
+                    <NavLink className="WelcomeFooter-navLink" to='/terminos'>Términos y condiciones</NavLink>
                 </li>
-                <li className="Footer-textLink">
-                    <NavLink className="Footer-navLink" to='/terminos'>Términos y condiciones</NavLink>
+                <li className="WelcomeFooter-textLink">
+                    © 2025 ONPIK - Todos los derechos reservados
                 </li>
-                <li className="Footer-textLink">
-                    <NavLink className="Footer-navLink" to='/privacidad'>Política de privacidad y cookies</NavLink>
+
+                <li>
+                    <NavLink className="WelcomeFooter-navLink" to='/privacidad'>Política de privacidad y cookies</NavLink>
                 </li>
             </ul>
         </>

@@ -1,0 +1,20 @@
+.Carrusel-container {
+    width: 500px;
+    height: 70vh;
+    margin: 0px 20px 0px 200px;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.Carrusel-inner {
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.5s ease-in-out;
+}
+
+.Carrusel-img {
+    width: 500px;
+    height: 1200px;
+    object-fit: cover;
+}

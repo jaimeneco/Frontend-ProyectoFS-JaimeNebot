@@ -3,7 +3,8 @@
     background-color: #ffffff;
     color: #000000;
     margin: 0;
-    padding: 2rem;
+    padding: 30px;
+    border-radius: 20px;
 }
 
 .Main-form {
