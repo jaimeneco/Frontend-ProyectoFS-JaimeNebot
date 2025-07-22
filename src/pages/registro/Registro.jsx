@@ -5,6 +5,7 @@ import { Footer } from '../../components/footer/Footer'
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import { FormRegistro } from '../../components/formulario/FormRegistro';
+import { NavLink } from 'react-router-dom';
 
 
 export const Registro = () => {
@@ -65,7 +66,6 @@ export const Registro = () => {
     }
     return (
         <>
-            <Header />
             <main className="Main-registro">
 
                 <h1 className="Main-formTitle">Registro de Usuario</h1>
@@ -86,7 +86,18 @@ export const Registro = () => {
                         </div>)}
                 </div>
             </main>
-            <Footer />
+            <ul className="WelcomeFooter-navList">
+                <li>
+                    <NavLink className="WelcomeFooter-navLink" to='/terminos'>Términos y condiciones</NavLink>
+                </li>
+                <li className="WelcomeFooter-textLink">
+                    © 2025 ONPIK - Todos los derechos reservados
+                </li>
+
+                <li>
+                    <NavLink className="WelcomeFooter-navLink" to='/privacidad'>Política de privacidad y cookies</NavLink>
+                </li>
+            </ul>
         </>
     );
 }
