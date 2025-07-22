@@ -1,4 +1,4 @@
-.Main-registro {
+/* .Main-registro {
     align-items: center;
     display: flex;
     flex-direction: column;
@@ -11,4 +11,99 @@
     align-items: center;
     justify-content: center;
     align-content: center;
+} */
+
+.Registro-main {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    align-items: center;
+    background-color: #fff;
+    height: 100vh
+}
+
+
+.Main-login {
+    flex: 1;
+    padding: 60px 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.Registro-logoGrande {
+    padding: 100px;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+.Registro-logoText{
+    font-family: "Oswald", sans-serif;
+    font-size: 2.8rem;
+    font-weight: 300;
+    color: #202020;
+    
+}
+
+.Registro-mainFormTitle {
+    font-family: Oswald, sans-serif;
+    color: #202020;
+    padding: 20px;
+    font-size: 2rem;
+    font-weight: 500;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+
+.WelcomeRegistro-inicio {
+    color: #202020;
+    font-size: 1.3rem;
+    font-family: "Oswald", sans-serif;
+    padding: 20px;
+}
+
+.WelcomeLink-registro {
+    color: #c69c6d;
+    font-size: 1.6rem;
+
+}
+
+.WelcomeLink-registro:hover {
+    transform: scale(2.3);
+    color: #fff;
+}
+
+.WelcomeFooter-navList {
+    display: flex;
+    flex-direction: row;
+    background-color: #c69c6d;
+    justify-content: space-between;
+    padding: 20px 60px;
+    list-style: none;
+    font-family: "Oswald", sans-serif;
+
+}
+
+.WelcomeFooter-textLink {
+    display: flex;
+    flex-direction: row;
+    color: #202020;
+    font-size: 1.5rem;
+
+}
+
+.WelcomeFooter-navLink {
+    color: #202020;
+    transform: none;
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+
+.WelcomeFooter-navLink:hover {
+    color: #fff;
 }

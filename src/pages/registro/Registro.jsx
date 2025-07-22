@@ -1,11 +1,10 @@
 import './Registro.css';
-import { Header } from '../../components/header/Header'
-import { Footer } from '../../components/footer/Footer'
 
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import { FormRegistro } from '../../components/formulario/FormRegistro';
 import { NavLink } from 'react-router-dom';
+import CarruselVertical from '../../components/carrusel/CarruselVertical';
 
 
 export const Registro = () => {
@@ -66,24 +65,36 @@ export const Registro = () => {
     }
     return (
         <>
-            <main className="Main-registro">
+            <main className='Registro-main'>
+                <div className='Registro-carrusel'>
+                    <CarruselVertical />
+                </div>
+                <div className="Registro-login">
+                    <div className='Registro-logoGrande'>
+                        <img src="./imgs/logo-white.png" alt="Logo" />
+                        <p className='Registro-logoText'>¡Tu tienda de alquiler deportivo!</p>
+                    </div>
+                    <h1 className="Registro-mainFormTitle">REGISTRO DE USUARIO</h1>
+                    <div className='Login-divForm'>
+                        <div className='Registro-divForm'>
+                            <FormRegistro
+                                name={name}
+                                setName={setName}
+                                email={email}
+                                setEmail={setEmail}
+                                password={password}
+                                setPassword={setPassword}
+                                confirmPassword={confirmPassword}
+                                setConfirmPassword={setConfirmPassword}
+                                handleSubmit={handleSubmit}
+                            />
+                            {error && (
+                                <div className='Login-error'>{error}
+                                </div>)}
+                        </div>
 
-                <h1 className="Main-formTitle">Registro de Usuario</h1>
-                <div className='Registro-divForm'>
-                    <FormRegistro
-                        name={name}
-                        setName={setName}
-                        email={email}
-                        setEmail={setEmail}
-                        password={password}
-                        setPassword={setPassword}
-                        confirmPassword={confirmPassword}
-                        setConfirmPassword={setConfirmPassword}
-                        handleSubmit={handleSubmit}
-                    />
-                    {error && (
-                        <div className='Login-error'>{error}
-                        </div>)}
+                    </div>
+                    <div className='WelcomeRegistro-inicio'>¿Ya tienes una cuenta? <NavLink to='/' className='WelcomeLink-registro'>¡INICIA SESIÓN AQUÍ! </NavLink></div>
                 </div>
             </main>
             <ul className="WelcomeFooter-navList">
@@ -98,6 +109,7 @@ export const Registro = () => {
                     <NavLink className="WelcomeFooter-navLink" to='/privacidad'>Política de privacidad y cookies</NavLink>
                 </li>
             </ul>
+
         </>
     );
 }

@@ -27,8 +27,6 @@ export const FormRegistro = ({ name, setName, email, setEmail, password, setPass
                     </label>
 
                     <button className='Button' type="submit">Registrarme</button>
-                    <p>Si ya tienes cuenta, <NavLink to="/welcome"> ¡entra con tu usuario!</NavLink></p>
-            
                 </fieldset>
             </form>
         </main>

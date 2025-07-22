@@ -27,7 +27,7 @@ export const Footer = () => {
 
                 <div className="Footer-content">
                     <div className="Footer-logo">
-                        <NavLink to="/">
+                        <NavLink to="/home">
                             <img src="/imgs/img-footer/logo-footer.png" alt="Logotipo ONPIK" title='ONPIK' className="Footer-logoImage" loading='lazy' />
                         </NavLink>
                     </div>
