@@ -94,15 +94,8 @@ export const Welcome = () => {
                 </div>
             </main>
             <ul className="WelcomeFooter-navList">
-                <li>
-                    <NavLink className="WelcomeFooter-navLink" to='/terminos'>Términos y condiciones</NavLink>
-                </li>
                 <li className="WelcomeFooter-textLink">
                     © 2025 ONPIK - Todos los derechos reservados
-                </li>
-
-                <li>
-                    <NavLink className="WelcomeFooter-navLink" to='/privacidad'>Política de privacidad y cookies</NavLink>
                 </li>
             </ul>
         </>

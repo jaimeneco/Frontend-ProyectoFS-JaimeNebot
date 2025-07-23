@@ -92,22 +92,17 @@ export const Registro = () => {
                                 <div className='Login-error'>{error}
                                 </div>)}
                         </div>
-
                     </div>
-                    <div className='WelcomeRegistro-inicio'>¿Ya tienes una cuenta? <NavLink to='/' className='WelcomeLink-registro'>¡INICIA SESIÓN AQUÍ! </NavLink></div>
+                    
+                    <div className='Registro-inicio'>¿Ya tienes una cuenta? <NavLink to='/' className='Link-registro'>¡INICIA SESIÓN AQUÍ! </NavLink></div>
                 </div>
             </main>
             <ul className="WelcomeFooter-navList">
-                <li>
-                    <NavLink className="WelcomeFooter-navLink" to='/terminos'>Términos y condiciones</NavLink>
-                </li>
                 <li className="WelcomeFooter-textLink">
                     © 2025 ONPIK - Todos los derechos reservados
                 </li>
 
-                <li>
-                    <NavLink className="WelcomeFooter-navLink" to='/privacidad'>Política de privacidad y cookies</NavLink>
-                </li>
+                
             </ul>
 
         </>
