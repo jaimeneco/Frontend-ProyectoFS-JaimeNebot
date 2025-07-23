@@ -1,11 +1,11 @@
 .Carrusel {
     position: relative;
     width: 100%;
-    max-width: 20%;
-    max-height: auto;
-    margin: 0 auto;
+    max-width: 700px;
+    /* Ajuste del tamaño máximo del carrusel */
+    margin: 2rem auto;
     overflow: hidden;
-    font-family: 'Oswald', sans-serif;
+    padding: 0 2rem;
 }
 
 .Carrusel-track {
@@ -15,62 +15,87 @@
 
 .Carrusel-slide {
     min-width: 100%;
-    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
     padding: 1rem;
 }
 
-.Carrusel-img {
-    position: relative;
+.Carrusel-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    width: 280px;
+    /* Fijamos el ancho de la card */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease;
 }
 
-.Carrusel-img img {
-    display: block;
-    width: 100%;
-    height: 50%;
-    height: auto;
+.Carrusel-card:hover {
+    transform: translateY(-5px);
 }
 
-.Carrusel-text {
-    position: absolute;
-    bottom: 0;
-    left: 0;
+.Carrusel-card img {
     width: 100%;
-    background: rgba(0, 0, 0, 0.6);
-    padding: 0.5rem;
-    box-sizing: border-box;
-    border-top: 2px solid #fff;
-    color: #fff;
+    height: 400px;
+    /* Imagen más pequeña */
+    object-fit: cover;
+    border-bottom: 1px solid #ddd;
+}
+
+.Carrusel-info {
+    padding: 0.8rem;
     text-align: center;
 }
 
+.Carrusel-info h3 {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 0.3rem;
+}
+
+.Carrusel-info p {
+    font-size: 0.85rem;
+    color: #666;
+    margin: 0.2rem 0;
+}
+
+.Carrusel-price {
+    color: #007b00;
+    font-weight: bold;
+    font-size: 0.95rem;
+    margin-top: 0.3rem;
+}
+
+/* Botones */
 .Nav-button {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: #fff;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
     border: none;
-    padding: 0.5rem;
-    border-radius: 50%;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    padding: 0.4rem 0.7rem;
+    font-size: 1.2rem;
     cursor: pointer;
-    font-size: 1.5rem;
-    line-height: 1;
-}
-
-.Nav-button.prev {
-    left: 1rem;
-}
-
-.Nav-button.next {
-    right: 1rem;
+    border-radius: 50%;
+    transition: background 0.3s ease;
 }
 
 .Nav-button:hover {
-    background: #f0f0f0;
+    background: rgba(0, 0, 0, 0.7);
 }
+
+.Nav-button.prev {
+    left: 5px;
+}
+
+.Nav-button.next {
+    right: 5px;
+}
+
 
 @media (max-width: 768px) {
     .Carrusel {

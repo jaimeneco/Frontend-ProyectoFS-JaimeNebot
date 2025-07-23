@@ -1,10 +1,30 @@
 import './Mountain.css';
-import { Header } from '../../components/header/Header'
-import { Footer } from '../../components/footer/Footer'
+import { Header } from '../../components/header/Header';
+import { Footer } from '../../components/footer/Footer';
 import { CarruselMountain } from '../../components/carrusel/CarruselMountain';
 import { TituloMountain } from '../../components/tituloAnimado/TituloMountain';
+import { useEffect, useState } from 'react';
 
 export const Mountain = () => {
+    const [productos, setProductos] = useState([]);
+
+    useEffect(() => {
+        const fetchProductos = async () => {
+            try {
+                const res = await fetch('http://localhost:3000/api/v1/productos'); 
+                const data = await res.json();
+                setProductos(data.data); // Guardamos el array completo
+            } catch (error) {
+                console.error('Error al obtener productos:', error);
+            }
+        };
+
+        fetchProductos();
+    }, []);
+
+    // Filtrar productos por type "Mountain"
+    const productosMountain = productos.filter(prod => prod.type === "Mountain");
+
     return (
         <>
             <Header />
@@ -14,41 +34,35 @@ export const Mountain = () => {
                         <TituloMountain />
                     </div>
                 </div>
+
                 <div className='Main-carrusel'>
-                    <p className='Carrusel-title'>EN LA MONTAÑA... <br /> ¡SIEMPRE BIEN EQUIPADO!</p>
+                    <p className='Carrusel-title'>
+                        EN LA MONTAÑA... <br /> ¡SIEMPRE BIEN EQUIPADO!
+                    </p>
                     <CarruselMountain autoPlay={false} />
                 </div>
-                <div id='snow' className='Main-productos'>
-                    <p className='Productos-text' >Snowboard:</p>
-                    <div className='Productos-img'>
-                        <img src="/imgs/img-productos/img-snow/img-snow-1.png" alt="Imagen snow" />
-                        <img src="/imgs/img-productos/img-snow/img-snow-2.png" alt="Imagen snow" />
-                        <img src="/imgs/img-productos/img-snow/img-snow-3.png" alt="Imagen snow" />
-                        <img src="/imgs/img-productos/img-snow/img-snow-4.png" alt="Imagen snow" />
-                        <img src="/imgs/img-productos/img-snow/img-snow-5.png" alt="Imagen snow" />
-                    </div>
-                    <p className='Productos-text'>Ski:</p>
-                    <div className='Productos-img'>
-                        <img src="/imgs/img-productos/img-ski/img-ski-1.png" alt="Imagen ski" />
-                        <img src="/imgs/img-productos/img-ski/img-ski-2.png" alt="Imagen ski" />
-                        <img src="/imgs/img-productos/img-ski/img-ski-3.png" alt="Imagen ski" />
-                        <img src="/imgs/img-productos/img-ski/img-ski-4.png" alt="Imagen ski" />
-                        <img src="/imgs/img-productos/img-ski/img-ski-5.png" alt="Imagen ski" />
-                    </div>
 
-                    <p className='Productos-text'>Equipamiento y accesorios:</p>
-                    <div className='Productos-img'>
-                        <img src="/imgs/img-productos/img-equipMoun/img-equipMon-1.png" alt="Imagen equipamiento" />
-                        <img src="/imgs/img-productos/img-equipMoun/img-equipMon-2.png" alt="Imagen equipamiento" />
-                        <img src="/imgs/img-productos/img-equipMoun/img-equipMon-3.png" alt="Imagen equipamiento" />
-                        <img src="/imgs/img-productos/img-equipMoun/img-equipMon-4.png" alt="Imagen equipamiento" />
-                        <img src="/imgs/img-productos/img-equipMoun/img-equipMon-5.png" alt="Imagen equipamiento" />
+                {/* Nueva sección: Productos */}
+                <section className="productos-section">
+                    <h2>Productos disponibles</h2>
+                    <div className="productos-grid">
+                        {productosMountain.length > 0 ? (
+                            productosMountain.map((prod) => (
+                                <div key={prod._id} className="producto-card">
+                                    <img src={prod.img} alt={prod.title} />
+                                    <h3>{prod.title}</h3>
+                                    <p>{prod.description}</p>
+                                    <p className="price">{prod.price} €/día</p>
+                                </div>
+                            ))
+                        ) : (
+                            <p>No hay productos de montaña disponibles.</p>
+                        )}
                     </div>
-
-                </div>
+                </section>
             </main>
             <Footer />
         </>
-
     );
-}
+};
+
