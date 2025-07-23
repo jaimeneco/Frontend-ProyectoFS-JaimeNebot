@@ -2,57 +2,83 @@ import React, { useState, useEffect } from 'react';
 import './Carrusel.css';
 
 export function CarruselHome() {
-    const products = [
-    { id: 1, title: 'Tabla Surf Alpha', marca: 'Quiksilver', type: 'surf', price: '20€/día', img: '/imgs/img-productos/img-surf/img-surf-1.png' },
-    { id: 2, title: 'Tabla Snow WaveX', marca: 'Billabong', type: 'snow', price: '22€/día', img: '/imgs/img-productos/img-snow/img-snow-1.png' },
-    { id: 3, title: 'Tabla Kite Flow',   marca: 'Rip Curl',    type: 'kite', price: '18€/día', img: '/imgs/img-productos/img-kite/img-kite-1.png' },
-    { id: 4, title: 'Skis nieve Oceanic', marca: 'Hurley',      type: 'ski', price: '21€/día', img: '/imgs/img-productos/img-ski/img-ski-1.png' },
-    { id: 5, title: 'Neopreno Hydra',   marca: "O'Neill",    type: 'equip', price: '19€/día', img: '/imgs/img-productos/img-equipSea/img-equipMar-1.png' },
-    ];
+    const [products, setProducts] = useState([]);
+    const [current, setCurrent] = useState(0);
 
-        const [current, setCurrent] = useState(0);
+    useEffect(() => {
+        const fetchProductos = async () => {
+            try {
+                const res = await fetch('http://localhost:3000/api/v1/productos');
+                const data = await res.json();
+
+                // Filtramos productos por type SEA o MOUNTAIN (case insensitive)
+                const productosFiltrados = data.data.filter(
+                    (prod) => 
+                        prod.type?.toLowerCase() === 'sea' || 
+                        prod.type?.toLowerCase() === 'mountain'
+                );
+
+                // Mezclamos los productos de forma aleatoria
+                const productosAleatorios = productosFiltrados.sort(() => Math.random() - 0.5);
+
+                setProducts(productosAleatorios);
+            } catch (error) {
+                console.error('Error al obtener productos para el carrusel:', error);
+            }
+        };
+        fetchProductos();
+    }, []);
 
     const handlePrev = () => {
-    setCurrent(prev => (prev - 1 + products.length) % products.length);
+        setCurrent((prev) => (prev - 1 + products.length) % products.length);
     };
 
     const handleNext = () => {
-    setCurrent(prev => (prev + 1) % products.length);
+        setCurrent((prev) => (prev + 1) % products.length);
     };
 
     useEffect(() => {
-    const onKeyDown = e => {
-        if (e.key === 'ArrowLeft') handlePrev();
-        if (e.key === 'ArrowRight') handleNext();
-    };
-    window.addEventListener('keydown', onKeyDown);
-    return () => window.removeEventListener('keydown', onKeyDown);
-    }, []);
+        const onKeyDown = (e) => {
+            if (e.key === 'ArrowLeft') handlePrev();
+            if (e.key === 'ArrowRight') handleNext();
+        };
+        window.addEventListener('keydown', onKeyDown);
+        return () => window.removeEventListener('keydown', onKeyDown);
+    }, [products]);
+
+    if (products.length === 0) {
+        return <p className="Carrusel-loading">Cargando productos...</p>;
+    }
 
     return (
-    <div className="Carrusel">
-      <div className="Carrusel-track" style={{ transform: `translateX(-${current * 100}%)` }}>
-        {products.map(prod => (
-            <div key={prod.id} className="Carrusel-slide">
-            <div className="Carrusel-img">
-                <img src={prod.img} alt={prod.title} loading="lazy" />
-                <div className="Carrusel-text">
-                <h3>{prod.title}</h3>
-                <p>{prod.marca}</p>
-                <p>{prod.price}</p>
-                </div>
+        <div className="Carrusel">
+            <div
+                className="Carrusel-track"
+                style={{ transform: `translateX(-${current * 100}%)` }}
+            >
+                {products.map((prod) => (
+                    <div key={prod._id} className="Carrusel-slide">
+                        <div className="Carrusel-card">
+                            <img className="Carrusel-img" src={prod.img} alt={prod.title} loading="lazy" />
+                            <div className="Carrusel-info">
+                                <h3>{prod.title}</h3>
+                                <p>{prod.description}</p>
+                                <p className="Carrusel-price">{prod.price} €</p>
+                            </div>
+                        </div>
+                    </div>
+                ))}
             </div>
-            </div>
-        ))}
+            <button className="Nav-button prev" onClick={handlePrev} aria-label="Anterior">
+                &#10094;
+            </button>
+            <button className="Nav-button next" onClick={handleNext} aria-label="Siguiente">
+                &#10095;
+            </button>
         </div>
-        <button className="Nav-button prev" onClick={handlePrev} aria-label="Anterior">
-        &#10094;
-        </button>
-        <button className="Nav-button next" onClick={handleNext} aria-label="Siguiente">
-        &#10095;
-        </button>
-    </div>
-);
+    );
 }
+
+
 
 

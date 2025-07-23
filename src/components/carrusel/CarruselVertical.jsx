@@ -4,8 +4,8 @@ import { useEffect, useState, useRef } from "react";
 const images = [
     "./imgs/img-productos/img-equipMoun/img-equipMon-1.png",
     "./imgs/img-productos/img-equipMoun/img-equipMon-2.png",
-    "./imgs/img-productos/img-equipSea/img-equipMar-1.png",
-    "./imgs/img-productos/img-equipSea/img-equipMar-4.png"
+    "./imgs/img-productos/img-equipMar/img-equipMar-1.png",
+    "./imgs/img-productos/img-equipMar/img-equipMar-4.png"
 ];
 
 export default function CarruselVertical() {

@@ -43,16 +43,16 @@ export const Mountain = () => {
                 </div>
 
                 {/* Nueva sección: Productos */}
-                <section className="productos-section">
+                <section className="Productos-section">
                     <h2>Productos disponibles</h2>
-                    <div className="productos-grid">
+                    <div className="Productos-grid">
                         {productosMountain.length > 0 ? (
                             productosMountain.map((prod) => (
-                                <div key={prod._id} className="producto-card">
+                                <div key={prod._id} className="Producto-card">
                                     <img src={prod.img} alt={prod.title} />
                                     <h3>{prod.title}</h3>
                                     <p>{prod.description}</p>
-                                    <p className="price">{prod.price} €/día</p>
+                                    <p className="Price">{prod.price} €/día</p>
                                 </div>
                             ))
                         ) : (
