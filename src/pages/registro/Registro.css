@@ -1,57 +1,42 @@
-/* .Main-registro {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    padding: 20px 0px 00px 0px;
-}
-
-.Main-formTitle{
-    font-family: Oswald, sans-serif;
-    font-size: 2rem;
-    align-items: center;
-    justify-content: center;
-    align-content: center;
-} */
-
 .Registro-main {
     display: flex;
     height: 100vh;
     width: 100vw;
     overflow: hidden;
     align-items: center;
-    background-color: #fff;
-    height: 100vh
+    background-color: #fff; 
 }
 
-
-.Main-login {
+/* Columna derecha con el formulario */
+.Registro-login {
     flex: 1;
     padding: 60px 80px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
 }
 
+/* Logo grande */
 .Registro-logoGrande {
-    padding: 100px;
+    padding: 40px; /* Antes eran 100px */
     align-items: center;
     align-content: center;
     justify-content: center;
 }
 
-.Registro-logoText{
+/* Texto debajo del logo */
+.Registro-logoText {
     font-family: "Oswald", sans-serif;
     font-size: 2.8rem;
     font-weight: 300;
-    color: #202020;
-    
+    color: #202020; /* Igual que Welcome */
 }
 
+/* Título principal */
 .Registro-mainFormTitle {
     font-family: Oswald, sans-serif;
-    color: #202020;
+    color: #202020; /* Igual que Welcome */
     padding: 20px;
     font-size: 2rem;
     font-weight: 500;
@@ -60,24 +45,25 @@
     align-content: center;
 }
 
+/* Texto de enlace a login */
 .WelcomeRegistro-inicio {
-    color: #202020;
-    font-size: 1.3rem;
+    /* color: #202020;  */
+    font-size: 6rem;
     font-family: "Oswald", sans-serif;
     padding: 20px;
 }
 
 .WelcomeLink-registro {
-    color: #c69c6d;
+    color: #202020;
     font-size: 1.6rem;
-
 }
 
 .WelcomeLink-registro:hover {
     transform: scale(2.3);
-    color: #fff;
+    color: #202020;
 }
 
+/* Footer */
 .WelcomeFooter-navList {
     display: flex;
     flex-direction: row;
@@ -86,7 +72,6 @@
     padding: 20px 60px;
     list-style: none;
     font-family: "Oswald", sans-serif;
-
 }
 
 .WelcomeFooter-textLink {
@@ -94,7 +79,6 @@
     flex-direction: row;
     color: #202020;
     font-size: 1.5rem;
-
 }
 
 .WelcomeFooter-navLink {
