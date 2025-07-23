@@ -4,22 +4,21 @@ import { Footer } from '../../components/footer/Footer'
 
 
 export const Usuario = () => {
-    return ( 
+    return (
         <>
-        <Header />
-        <main>
-            <div className='Main-info'>
-                <img src="/" alt="" />
-                <p>Nombre de usuario:</p>
-                <p>Ciudad:</p>
-                <p>País:</p>
-            </div>
-            <div className='Main-content'>
-                <p>¡Nos alegramos de tenerte por aquí!</p>
-                <p>Tus últimas búsquedas</p>
-            </div>
-        </main>
-        <Footer />
+            <Header />
+            <main className='Usuario-main'>
+                <p className='Usuario-mainTitle'>¡Nos alegramos de tenerte por aquí!</p>
+                <div className='Usuario-card'>
+                    <img className='Usuario-img' src="/" alt="Img perfil" />
+                    <p className='Usuario-text'>Nombre de usuario:</p>
+                    <p className='Usuario-text'>Ciudad:</p>
+                    <p className='Usuario-text'>País:</p>
+                    <button className='Usuario-button'>Cerrar sesión</button>
+                </div>
+                
+            </main>
+            <Footer />
         </>
     );
 }

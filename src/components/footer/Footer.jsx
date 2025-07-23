@@ -17,7 +17,7 @@ export const Footer = () => {
                             <NavLink className="Footer-navLink" to='/aboutus' title='Ir a About us'>About us</NavLink>
                         </li>
                         <li className="Footer-navLink">
-                        <NavLink className="Footer-navLink" to='/login' title='Ir a usuario'><img src="/imgs/img-header/img-perfil.png" alt="Ir al perfil"/></NavLink>
+                        <NavLink className="Footer-navLink" to='/usuario' title='Ir a usuario'><img src="/imgs/img-header/img-perfil.png" alt="Ir al perfil"/></NavLink>
                         </li>
                         <li className="Footer-navLink">
                             <NavLink className="Footer-navLink" to='/compras' title='Ir a Compras'><img src="/imgs/img-header/img-carrito.png" alt="Ir a Compras"/></NavLink>

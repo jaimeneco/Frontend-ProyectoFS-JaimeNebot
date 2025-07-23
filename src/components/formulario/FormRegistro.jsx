@@ -3,7 +3,7 @@ import { NavLink } from 'react-router';
 
 export const FormRegistro = ({ name, setName, email, setEmail, password, setPassword, confirmPassword, setConfirmPassword, handleSubmit }) => {
     return (
-        <main className='Form-registro'>
+        <main className='Form-inicio'>
             <form onSubmit={handleSubmit} className="Main-form">
                 <fieldset className='Fieldset'>
                     <label className="Fieldset-label">
