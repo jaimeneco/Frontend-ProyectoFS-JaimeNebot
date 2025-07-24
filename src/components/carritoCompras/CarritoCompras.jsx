@@ -1,94 +1,74 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
+import './CarritoCompras.css';
 
 // Componentes reutilizables
 export const Card = ({ children }) => (
-    <div className="bg-white rounded-2xl shadow-md p-4">{children}</div>
+    <div className="Carrito-card">{children}</div>
 );
 
 export const CardContent = ({ children, className = '' }) => (
-    <div className={`p-2 ${className}`}>{children}</div>
+    <div className={`Carrito-cardContent ${className}`}>{children}</div>
 );
 
-export const Button = ({ children, onClick }) => (
-    <button
-        onClick={onClick}
-        className="bg-blue-500 text-white px-4 py-2 rounded-xl hover:bg-blue-600 transition"
-    >
+export const Button = ({ children, onClick, className = '' }) => (
+    <button onClick={onClick} className={`btn-primary ${className}`}>
         {children}
     </button>
 );
 
-
-
 export const CarritoCompras = () => {
-    const [productos, setProductos] = useState([]);
     const [carrito, setCarrito] = useState([]);
+    const navigate = useNavigate();
 
     useEffect(() => {
-        const obtenerProductos = async () => {
-            try {
-                const respuesta = await fetch('https://api.ejemplo.com/productos');
-                const datos = await respuesta.json();
-                setProductos(datos);
-            } catch (error) {
-                console.error('Error al obtener productos:', error);
-            }
-        };
-
-        obtenerProductos();
+        const carritoGuardado = JSON.parse(localStorage.getItem('carrito')) || [];
+        setCarrito(carritoGuardado);
     }, []);
 
-    const agregarAlCarrito = (producto) => {
-        setCarrito((prev) => {
-            const existe = prev.find((item) => item.id === producto.id);
-            if (existe) {
-                return prev.map((item) =>
-                    item.id === producto.id
-                        ? { ...item, cantidad: item.cantidad + 1 }
-                        : item
-                );
-            } else {
-                return [...prev, { ...producto, cantidad: 1 }];
-            }
-        });
+    const eliminarDelCarrito = (id) => {
+        const nuevoCarrito = carrito.filter(item => item.id !== id);
+        setCarrito(nuevoCarrito);
+        localStorage.setItem('carrito', JSON.stringify(nuevoCarrito));
+    };
+
+    const comprar = () => {
+        // Aquí podrías agregar lógica de confirmación de compra, etc.
+        alert('¡Gracias por tu compra!');
+        setCarrito([]);
+        localStorage.removeItem('carrito');
+        navigate('/home');
     };
 
     const totalProductos = carrito.reduce((acc, item) => acc + item.cantidad, 0);
-    const totalPrecio = carrito.reduce((acc, item) => acc + item.precio * item.cantidad, 0);
+    const totalPrecio = carrito.reduce((acc, item) => acc + item.price * item.cantidad, 0);
 
     return (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4">
-            {productos.map((producto) => (
-                <Card key={producto.id}>
-                    <CardContent className="flex flex-col items-center text-center">
-                        <img src={producto.imagen} alt={producto.nombre} className="mb-2 w-32 h-32 object-cover" />
-                        <h2 className="text-lg font-bold">{producto.nombre}</h2>
-                        <p className="text-sm mb-2">{producto.descripcion}</p>
-                        <p className="font-semibold mb-2">${producto.precio}</p>
-                        <Button onClick={() => agregarAlCarrito(producto)}>Añadir al carrito</Button>
-                    </CardContent>
-                </Card>
-            ))}
-
-            <div className="col-span-full mt-8">
-                <h2 className="text-xl font-bold mb-4">Carrito de Compras</h2>
-                {carrito.length === 0 ? (
-                    <p>No hay productos en el carrito.</p>
-                ) : (
-                    <div className="space-y-2">
-                        {carrito.map((item) => (
-                            <div key={item.id} className="flex justify-between">
-                                <span>{item.nombre} x {item.cantidad}</span>
-                                <span>${item.precio * item.cantidad}</span>
-                            </div>
-                        ))}
-                        <div className="mt-4 font-bold flex justify-between">
-                            <span>Total productos: {totalProductos}</span>
-                            <span>Total a pagar: ${totalPrecio}</span>
+        <div className="Carrito-resumen">
+            <h2 className="Carrito-titulo">Carrito de Compras</h2>
+            {carrito.length === 0 ? (
+                <p className="Carrito-vacio">No hay productos en el carrito.</p>
+            ) : (
+                <div className="Carrito-list">
+                    {carrito.map((item) => (
+                        <div key={item.id} className="Carrito-item">
+                            <span>{item.title} x {item.cantidad}</span>
+                            <span>{item.img}</span>
+                            <span>{item.price * item.cantidad} €</span>
+                            <Button onClick={() => eliminarDelCarrito(item.id)} className="Btn-eliminar">
+                                Eliminar
+                            </Button>
                         </div>
+                    ))}
+                    <div className="Carrito-total">
+                        <span>Total productos: {totalProductos}</span>
+                        <span>Total a pagar: {totalPrecio} €</span>
                     </div>
-                )}
-            </div>
+                    <div className="Carrito-botonComprar">
+                        <Button onClick={comprar}>Comprar</Button>
+                    </div>
+                </div>
+            )}
         </div>
     );
-}
+};

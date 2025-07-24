@@ -24,9 +24,29 @@ export const DetalleProducto = () => {
     }, [id]);
 
     const handleAgregarAlCarrito = () => {
-        // Aquí podrías llamar a una función de contexto o localStorage
-        console.log('Producto añadido:', producto);
+        const carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+
+        const existe = carrito.find((item) => item._id === producto._id);
+
+        if (existe) {
+            const actualizado = carrito.map((item) =>
+                item._id === producto._id ? { ...item, cantidad: item.cantidad + 1 } : item
+            );
+            localStorage.setItem('carrito', JSON.stringify(actualizado));
+        } else {
+            carrito.push({ ...producto, cantidad: 1 });
+            localStorage.setItem('carrito', JSON.stringify(carrito));
+        }
+
+        alert('Producto añadido al carrito');
     };
+
+
+
+    // const handleAgregarAlCarrito = () => {
+    //     // Aquí podrías llamar a una función de contexto o localStorage
+    //     console.log('Producto añadido:', producto);
+    // };
 
     if (!producto) return <p>Cargando producto...</p>;
 
