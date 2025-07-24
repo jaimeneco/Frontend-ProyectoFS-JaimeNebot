@@ -41,7 +41,6 @@ export const Welcome = () => {
                 return;
             }
 
-            // console.log("Respuesta del login:", data);
 
             if (data.data.token) {
                 setError("");
@@ -50,13 +49,11 @@ export const Welcome = () => {
                 localStorage.setItem('user', JSON.stringify(data.data.user));
 
 
-                navigate("/");
+                navigate("/home");
             } else {
                 setError("No ha llegado el token")
             }
 
-            console.log('email:', email)
-            console.log('password:', password)
             console.log('logeado')
 
         } catch (e) {

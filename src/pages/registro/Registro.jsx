@@ -53,7 +53,7 @@ export const Registro = () => {
 
 
             setError("");
-            navigate('/home')
+            navigate('/')
 
         } catch (e) {
             console.error("Error en el registro", e);
