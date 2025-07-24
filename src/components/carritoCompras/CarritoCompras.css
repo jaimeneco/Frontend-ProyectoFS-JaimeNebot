@@ -70,7 +70,7 @@
     font-size: 1.15rem;
     display: flex;
     justify-content: space-between;
-    color: #c69c6d;
+    color: #202020;
 }
 
 .Carrito-botonComprar {
@@ -80,19 +80,19 @@
 }
 
 .Carrito-botonComprar .Btn-comprar {
-    background-color: #c69c6d;
+    background-color: transparent;
+    border: 4px solid #c69c6d;
     color: #202020;
-    border: none;
-    padding: 0.7rem 1.5rem;
+    padding: 0.4rem 0.8rem;
+    border-radius: 6px;
     font-family: 'Oswald', sans-serif;
-    font-size: 1.1rem;
-    border-radius: 8px;
+    font-size: 2rem;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .Carrito-botonComprar .Btn-comprar:hover {
-    background-color: #fff;
+    background-color: #c69c6d;
     color: #202020;
 }
 

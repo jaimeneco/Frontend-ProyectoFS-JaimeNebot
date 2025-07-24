@@ -65,7 +65,7 @@ export const CarritoCompras = () => {
                         <span>Total a pagar: {totalPrecio} €</span>
                     </div>
                     <div className="Carrito-botonComprar">
-                        <Button onClick={comprar}>Comprar</Button>
+                        <Button className='Btn-comprar' onClick={comprar}>Comprar</Button>
                     </div>
                 </div>
             )}
