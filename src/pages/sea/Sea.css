@@ -88,3 +88,8 @@
     font-weight: bold;
     margin-top: 0.5rem;
 }
+.Producto-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}

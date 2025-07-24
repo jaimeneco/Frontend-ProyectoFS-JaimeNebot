@@ -20,7 +20,7 @@ export const Button = ({ children, onClick }) => (
 
 
 
-export default function CarritoCompras() {
+export const CarritoCompras = () => {
     const [productos, setProductos] = useState([]);
     const [carrito, setCarrito] = useState([]);
 

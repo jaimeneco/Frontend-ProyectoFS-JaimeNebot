@@ -4,6 +4,7 @@ import { Footer } from '../../components/footer/Footer'
 import { CarruselSea } from '../../components/carrusel/CarruselSea';
 import { TituloSea } from '../../components/tituloAnimado/TituloSea';
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 
 export const Sea = () => {
@@ -47,12 +48,14 @@ export const Sea = () => {
                     <div className="Productos-grid">
                         {productosMountain.length > 0 ? (
                             productosMountain.map((prod) => (
-                                <div key={prod._id} className="Producto-card">
-                                    <img src={prod.img} alt={prod.title} />
-                                    <h3>{prod.title}</h3>
-                                    <p>{prod.description}</p>
-                                    <p className="Price">{prod.price} €/día</p>
-                                </div>
+                                <Link to={`/producto/${prod._id}`} key={prod._id} className="Producto-card-link">
+                                    <div className="Producto-card">
+                                        <img src={prod.img} alt={prod.title} />
+                                        <h3>{prod.title}</h3>
+                                        <p>{prod.description}</p>
+                                        <p className="Price">{prod.price} €/día</p>
+                                    </div>
+                                </Link>
                             ))
                         ) : (
                             <p>No hay productos de montaña disponibles.</p>
