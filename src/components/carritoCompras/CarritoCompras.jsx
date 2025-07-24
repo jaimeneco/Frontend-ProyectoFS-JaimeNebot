@@ -53,7 +53,8 @@ export const CarritoCompras = () => {
                     {carrito.map((item) => (
                         <div key={item.id} className="Carrito-item">
                             <span>{item.title} x {item.cantidad}</span>
-                            <span>{item.img}</span>
+                            <img src={item.img} alt={item.title} className="Carrito-img" />
+                            {/* <span>{item.img}</span> */}
                             <span>{item.price * item.cantidad} €</span>
                             <Button onClick={() => eliminarDelCarrito(item.id)} className="Btn-eliminar">
                                 Eliminar

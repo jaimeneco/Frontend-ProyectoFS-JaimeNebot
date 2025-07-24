@@ -23,7 +23,7 @@ export const Usuario = () => {
                 const data = await res.json();
 
                 if (res.ok) {
-                    setUsuario(data.data.user || data.data); // ajusta según cómo respondas desde el backend
+                    setUsuario(data.data.user || data.data);
                 } else {
                     console.error('Error en la respuesta:', data.msg || data);
                 }

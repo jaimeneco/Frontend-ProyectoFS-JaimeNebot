@@ -47,6 +47,13 @@
     margin-bottom: 0.5rem;
 }
 
+.Carrito-img {
+    width: 100px;
+    height: auto;
+    border-radius: 8px;
+    margin: 0 1rem;
+}
+
 .Btn-eliminar {
     background-color: transparent;
     border: 2px solid #c69c6d;
