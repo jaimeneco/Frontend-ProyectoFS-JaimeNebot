@@ -1,10 +1,14 @@
+.Registro-header {
+    margin: 10px;
+}
+
 .Registro-main {
     display: flex;
-    height: 100vh;
+    height: 130vh;
     width: 100vw;
     overflow: hidden;
     align-items: center;
-    background: #fff; 
+    background: #fff;
 }
 
 .Registro-login {
@@ -18,45 +22,50 @@
 
 .Registro-logoGrande {
     padding: 40px;
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    align-content: center;
     justify-content: center;
+}
+
+.Registro-logoImg {
+    width: 480px;
+    padding: 20px;
 }
 
 .Registro-logoText {
     font-family: "Oswald", sans-serif;
     font-size: 2.8rem;
     font-weight: 300;
-    color: #202020; 
+    color: #202020;
+    text-align: center;
 }
 
-
 .Registro-mainFormTitle {
-    font-family: Oswald, sans-serif;
+    font-family: "Oswald", sans-serif;
     color: #202020;
     padding: 5px;
     font-size: 2rem;
     font-weight: 500;
-    align-items: center;
-    justify-content: center;
-    align-content: center;
+    text-align: center;
 }
 
-
 .Registro-inicio {
-    color: #202020; 
+    color: #202020;
     font-size: 1.3rem;
     font-family: "Oswald", sans-serif;
     padding: 20px;
+    text-align: center;
 }
 
 .Link-registro {
     color: #202020;
     font-size: 1.6rem;
+    transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .Link-registro:hover {
-    transform: scale(2.3);
+    transform: scale(1.2);
     color: #c69c6d;
 }
 
@@ -71,19 +80,117 @@
 }
 
 .WelcomeFooter-textLink {
-    display: flex;
-    flex-direction: row;
     color: #202020;
     font-size: 1.5rem;
+    text-align: center;
 }
 
 .WelcomeFooter-navLink {
     color: #202020;
-    transform: none;
     font-size: 1.2rem;
     text-decoration: none;
+    transition: color 0.3s ease;
 }
 
 .WelcomeFooter-navLink:hover {
     color: #fff;
+}
+
+
+@media (max-width: 900px) {
+    .Registro-main {
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+    }
+
+    .Registro-login {
+        padding: 40px 30px;
+        width: 100%;
+    }
+
+    .Registro-logoImg {
+        width: 280px;
+        padding: 16px;
+    }
+
+    .Registro-logoText {
+        font-size: 2.2rem;
+    }
+
+    .Registro-mainFormTitle {
+        font-size: 1.8rem;
+    }
+
+    .Registro-inicio {
+        font-size: 1.1rem;
+        padding: 15px;
+    }
+
+    .Link-registro {
+        font-size: 1.4rem;
+    }
+
+    .WelcomeFooter-navList {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .WelcomeFooter-navLink {
+        font-size: 1.1rem;
+    }
+}
+
+
+@media (max-width: 600px) {
+    .Registro-main {
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+    }
+
+    .Registro-login {
+        padding: 20px 16px;
+        width: 100%;
+    }
+
+    .Registro-logoGrande {
+        padding: 10px;
+    }
+
+    .Registro-logoImg {
+        width: 200px;
+        padding: 12px;
+    }
+
+    .Registro-logoText {
+        font-size: 1.6rem;
+    }
+
+    .Registro-mainFormTitle {
+        font-size: 1.5rem;
+    }
+
+    .Registro-inicio {
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+    .Link-registro {
+        font-size: 1.2rem;
+    }
+
+    .WelcomeFooter-navList {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        gap: 10px;
+    }
+
+    .WelcomeFooter-textLink,
+    .WelcomeFooter-navLink {
+        font-size: 1rem;
+        text-align: center;
+    }
 }

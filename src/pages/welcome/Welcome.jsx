@@ -71,8 +71,8 @@ export const Welcome = () => {
                 </div>
                 <div className="Main-login">
                     <div className='Logo-grande'>
-                        <img src="./imgs/logo.png" alt="" />
-                        <p className='Logo-text'>¡Tu tienda de alquiler deportivo!</p>
+                        <img className='Welcome-logoImg' src="./imgs/logo.png" alt="" />
+                        <p className='Logo-text'>¡Tu tienda de marcas deportivas!</p>
                     </div>
                     <h1 className="Main-formTitle">INICIO DE SESIÓN</h1>
                     <div className='Login-divForm'>

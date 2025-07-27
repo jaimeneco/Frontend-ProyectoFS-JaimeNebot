@@ -65,14 +65,15 @@ export const Registro = () => {
     }
     return (
         <>
+            <header className='Registro-header'></header>
             <main className='Registro-main'>
                 <div className='Registro-carrusel'>
                     <CarruselVertical />
                 </div>
                 <div className="Registro-login">
                     <div className='Registro-logoGrande'>
-                        <img src="./imgs/logo-white.png" alt="Logo" />
-                        <p className='Registro-logoText'>¡Tu tienda de alquiler deportivo!</p>
+                        <img className='Registro-logoImg' src="./imgs/logo-white.png" alt="Logo" />
+                        <p className='Registro-logoText'>¡Tu tienda de marcas deportivas!</p>
                     </div>
                     <h1 className="Registro-mainFormTitle">REGISTRO DE USUARIO</h1>
                     <div className='Login-divForm'>

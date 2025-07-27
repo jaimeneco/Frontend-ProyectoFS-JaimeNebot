@@ -18,3 +18,34 @@
     height: 1200px;
     object-fit: cover;
 }
+
+/* Tablets (hasta 900px) */
+@media (max-width: 900px) {
+    .Carrusel-container {
+        width: 400px;
+        height: 60vh;
+        margin: 0px auto 20px auto;
+        /* centrado */
+    }
+
+    .Carrusel-img {
+        width: 400px;
+        /* height: 800px; */
+    }
+}
+
+/* Móviles (hasta 600px) */
+@media (max-width: 600px) {
+    .Carrusel-container {
+        width: 90%;
+        height: 50vh;
+        margin: 0 auto 20px auto;
+        box-shadow: none;
+        /* opcional para simplificar en móvil */
+    }
+
+    .Carrusel-img {
+        width: 100%;
+        height: 600px;
+    }
+}
