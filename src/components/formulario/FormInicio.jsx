@@ -16,7 +16,7 @@ export const FormInicio = ({ email, password, setEmail, setPassword, handleLogin
                         <input required value={password} onChange={(e) => setPassword(e.target.value)} className="Fieldset-input" type="password"></input>
                     </label>
                     {/* <button className='Button'>Iniciar sesión</button> */}
-                    <Link to='/home'>Iniciar Sesión</Link>
+                    <Link className='Button' to='/home'>Iniciar Sesión</Link>
                 </fieldset>
             </form>
         </main>
