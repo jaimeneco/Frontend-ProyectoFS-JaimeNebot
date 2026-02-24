@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import './Carrusel.css';
 
+const API_URL = import.meta.env.VITE_API_URL;
+const API_ROUTER = import.meta.env.VITE_API_ROUTER;
+
 export function CarruselSea() {
     const [products, setProducts] = useState([]);
     const [current, setCurrent] = useState(0);
@@ -8,9 +11,11 @@ export function CarruselSea() {
     useEffect(() => {
         const fetchProductos = async () => {
             try {
-                const res = await fetch('http://localhost:3000/api/v1/productos');
+                const res = await fetch(`${API_URL}${API_ROUTER}/productos`);
                 const data = await res.json();
-                const productosFiltrados = data.data.filter((prod) => prod.type === 'Sea');
+                const productosFiltrados = data.data.filter(
+                    (prod) => prod.type?.toLowerCase() === 'sea'
+                );
                 setProducts(productosFiltrados);
             } catch (error) {
                 console.error('Error al obtener productos para el carrusel:', error);
@@ -42,8 +47,8 @@ export function CarruselSea() {
 
     return (
         <div className="Carrusel">
-            <div 
-                className="Carrusel-track" 
+            <div
+                className="Carrusel-track"
                 style={{ transform: `translateX(-${current * 100}%)` }}
             >
                 {products.map(prod => (

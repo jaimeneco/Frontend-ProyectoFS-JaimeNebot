@@ -1,5 +1,4 @@
 import './FormRegistro.css';
-import { NavLink } from 'react-router';
 
 export const FormRegistro = ({ name, setName, email, setEmail, password, setPassword, confirmPassword, setConfirmPassword, handleSubmit }) => {
     return (
@@ -13,17 +12,17 @@ export const FormRegistro = ({ name, setName, email, setEmail, password, setPass
 
                     <label className="Fieldset-label">
                         <p className='Fieldset-inputTitle'>Email</p>
-                        <input value={email} onChange={(e) => setEmail(e.target.value)} className="Fieldset-input" type="text"></input>
+                        <input value={email} onChange={(e) => setEmail(e.target.value)} className="Fieldset-input" type="email" />
                     </label>
 
                     <label className="Fieldset-label">
                         <p className='Fieldset-inputTitle'>Contraseña</p>
-                        <input value={password} onChange={(e) => setPassword(e.target.value)} className="Fieldset-input" type="password"></input>
+                        <input value={password} onChange={(e) => setPassword(e.target.value)} className="Fieldset-input" type="password" />
                     </label>
 
                     <label className="Fieldset-label">
                         <p className='Fieldset-inputTitle'>Confirmar contraseña</p>
-                        <input value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} className="Fieldset-input" type="password"></input>
+                        <input value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} className="Fieldset-input" type="password" />
                     </label>
 
                     <button className='Button' type="submit">Registrarme</button>
@@ -32,4 +31,3 @@ export const FormRegistro = ({ name, setName, email, setEmail, password, setPass
         </main>
     )
 }
-

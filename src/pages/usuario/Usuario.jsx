@@ -3,6 +3,9 @@ import { useState, useEffect } from 'react';
 import { Header } from '../../components/header/Header';
 import { Footer } from '../../components/footer/Footer';
 
+const API_URL = import.meta.env.VITE_API_URL;
+const API_ROUTER = import.meta.env.VITE_API_ROUTER;
+const API_AUTH_GET_USER = import.meta.env.VITE_AUTH_GET_USER;
 
 export const Usuario = () => {
     const [usuario, setUsuario] = useState(null);
@@ -13,7 +16,7 @@ export const Usuario = () => {
             if (!token) return;
 
             try {
-                const res = await fetch('http://localhost:3000/api/v1/auth/me', {
+                const res = await fetch(`${API_URL}${API_ROUTER}/auth${API_AUTH_GET_USER}`, {
                     headers: {
                         'Content-Type': 'application/json',
                         'Authorization': `Bearer ${token}`,
@@ -24,7 +27,6 @@ export const Usuario = () => {
 
                 if (res.ok) {
                     setUsuario(data.data.user || data.data);
-                    // console.log(user, 'Userrrrrr2')
                 } else {
                     console.error('Error en la respuesta:', data.msg || data);
                 }
@@ -34,12 +36,12 @@ export const Usuario = () => {
         };
 
         fetchUsuario();
-        // console.log(usuario, 'Userrrrrr')
     }, []);
 
     const handleLogout = () => {
-        localStorage.removeItem('token'); // quitar el token
-        window.location.href = '/'; // redirigir al home o login
+        localStorage.removeItem('token');
+        localStorage.removeItem('user');
+        window.location.href = '/';
     };
 
     return (

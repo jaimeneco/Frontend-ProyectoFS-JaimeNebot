@@ -5,6 +5,9 @@ import { Header } from '../../components/header/Header';
 import { Footer } from '../../components/footer/Footer';
 import './DetalleProducto.css';
 
+const API_URL = import.meta.env.VITE_API_URL;
+const API_ROUTER = import.meta.env.VITE_API_ROUTER;
+
 export const DetalleProducto = () => {
     const { id } = useParams();
     const [producto, setProducto] = useState(null);
@@ -12,7 +15,7 @@ export const DetalleProducto = () => {
     useEffect(() => {
         const fetchProducto = async () => {
             try {
-                const res = await fetch(`http://localhost:3000/api/v1/productos/${id}`);
+                const res = await fetch(`${API_URL}${API_ROUTER}/productos/${id}`);
                 const data = await res.json();
                 setProducto(data.data);
             } catch (error) {
@@ -25,7 +28,6 @@ export const DetalleProducto = () => {
 
     const handleAgregarAlCarrito = () => {
         const carrito = JSON.parse(localStorage.getItem('carrito')) || [];
-
         const existe = carrito.find((item) => item._id === producto._id);
 
         if (existe) {
@@ -40,13 +42,6 @@ export const DetalleProducto = () => {
 
         alert('Producto añadido al carrito');
     };
-
-
-
-    // const handleAgregarAlCarrito = () => {
-    //     // Aquí podrías llamar a una función de contexto o localStorage
-    //     console.log('Producto añadido:', producto);
-    // };
 
     if (!producto) return <p>Cargando producto...</p>;
 

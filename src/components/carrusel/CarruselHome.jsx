@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import './Carrusel.css';
 
+const API_URL = import.meta.env.VITE_API_URL;
+const API_ROUTER = import.meta.env.VITE_API_ROUTER;
+
 export function CarruselHome() {
     const [products, setProducts] = useState([]);
     const [current, setCurrent] = useState(0);
@@ -8,19 +11,16 @@ export function CarruselHome() {
     useEffect(() => {
         const fetchProductos = async () => {
             try {
-                const res = await fetch('http://localhost:3000/api/v1/productos');
+                const res = await fetch(`${API_URL}${API_ROUTER}/productos`);
                 const data = await res.json();
 
-                // Filtramos productos por type SEA o MOUNTAIN (case insensitive)
                 const productosFiltrados = data.data.filter(
-                    (prod) => 
-                        prod.type?.toLowerCase() === 'sea' || 
+                    (prod) =>
+                        prod.type?.toLowerCase() === 'sea' ||
                         prod.type?.toLowerCase() === 'mountain'
                 );
 
-                // Mezclamos los productos de forma aleatoria
                 const productosAleatorios = productosFiltrados.sort(() => Math.random() - 0.5);
-
                 setProducts(productosAleatorios);
             } catch (error) {
                 console.error('Error al obtener productos para el carrusel:', error);
@@ -78,7 +78,3 @@ export function CarruselHome() {
         </div>
     );
 }
-
-
-
-

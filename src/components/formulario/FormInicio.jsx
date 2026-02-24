@@ -1,5 +1,4 @@
 import './FormInicio.css';
-import { Link } from 'react-router';
 
 export const FormInicio = ({ email, password, setEmail, setPassword, handleLogin }) => {
     return (
@@ -8,15 +7,27 @@ export const FormInicio = ({ email, password, setEmail, setPassword, handleLogin
                 <fieldset className='Fieldset'>
                     <label className="Fieldset-label">
                         <p className='Fieldset-inputTitle'>Email</p>
-                        <input required value={email} onChange={(e) => setEmail(e.target.value)} className="Fieldset-input" type="email" />
+                        <input
+                            required
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
+                            className="Fieldset-input"
+                            type="email"
+                        />
                     </label>
 
                     <label className="Fieldset-label">
                         <p className='Fieldset-inputTitle'>Contraseña</p>
-                        <input required value={password} onChange={(e) => setPassword(e.target.value)} className="Fieldset-input" type="password"></input>
+                        <input
+                            required
+                            value={password}
+                            onChange={(e) => setPassword(e.target.value)}
+                            className="Fieldset-input"
+                            type="password"
+                        />
                     </label>
-                    {/* <button className='Button'>Iniciar sesión</button> */}
-                    <Link className='Button' to='/home'>Iniciar Sesión</Link>
+
+                    <button type="submit" className='Button'>Iniciar Sesión</button>
                 </fieldset>
             </form>
         </main>

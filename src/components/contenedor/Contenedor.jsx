@@ -5,7 +5,7 @@ export const Contenedor = () => {
         <>
             <div className="Contenedor-imgs">
                 <NavLink className="NavLink" to="/mountain" title='Ir a Mountain'>
-                    <div className="Img-card" href="http://localhost:5173/mountain">
+                    <div className="Img-card">
                         <img src="/imgs/img-home/img-gridSnow.jpg" alt="Ir a tablas Mountain" loading="lazy" />
                         <p className="Text">LAS MEJORES TABLAS Y SKIS</p>
                     </div>

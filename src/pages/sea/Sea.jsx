@@ -6,6 +6,8 @@ import { TituloSea } from '../../components/tituloAnimado/TituloSea';
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
+const API_URL = import.meta.env.VITE_API_URL;
+const API_ROUTER = import.meta.env.VITE_API_ROUTER;
 
 export const Sea = () => {
     const [productos, setProductos] = useState([]);
@@ -13,9 +15,9 @@ export const Sea = () => {
     useEffect(() => {
         const fetchProductos = async () => {
             try {
-                const res = await fetch('http://localhost:3000/api/v1/productos');
+                const res = await fetch(`${API_URL}${API_ROUTER}/productos`);
                 const data = await res.json();
-                setProductos(data.data); // Guardamos el array completo
+                setProductos(data.data);
             } catch (error) {
                 console.error('Error al obtener productos:', error);
             }
@@ -24,8 +26,9 @@ export const Sea = () => {
         fetchProductos();
     }, []);
 
-    // Filtrar productos por type "Sea"
-    const productosMountain = productos.filter(prod => prod.type === "Sea");
+    const productosSea = productos.filter(
+        prod => prod.type?.toLowerCase() === 'sea'
+    );
 
     return (
         <>
@@ -42,12 +45,11 @@ export const Sea = () => {
                     <CarruselSea autoPlay={false} />
                 </div>
 
-                {/* Nueva sección: Productos */}
                 <section className="Productos-section">
                     <h2>Productos disponibles</h2>
                     <div className="Productos-grid">
-                        {productosMountain.length > 0 ? (
-                            productosMountain.map((prod) => (
+                        {productosSea.length > 0 ? (
+                            productosSea.map((prod) => (
                                 <Link to={`/producto/${prod._id}`} key={prod._id} className="Producto-card-link">
                                     <div className="Producto-card">
                                         <img src={prod.img} alt={prod.title} />
@@ -58,7 +60,7 @@ export const Sea = () => {
                                 </Link>
                             ))
                         ) : (
-                            <p>No hay productos de montaña disponibles.</p>
+                            <p>No hay productos de mar disponibles.</p>
                         )}
                     </div>
                 </section>
