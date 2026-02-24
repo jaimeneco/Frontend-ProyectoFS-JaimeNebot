@@ -1,6 +1,6 @@
 # ONPIK — Tienda de Equipamiento Deportivo
 
-Proyecto final del Módulo de Desarrollo Web Full Stack del CEI Valencia. ONPIK es una aplicación web completa para el alquiler y venta de equipamiento deportivo de montaña y mar, desarrollada desde cero con arquitectura separada de Frontend y Backend.
+Proyecto final del Módulo de Desarrollo Web Full Stack del CEI Valencia. ONPIK es una aplicación web completa para el alquiler y venta de equipamiento deportivo de montaña y mar, desarrollada desde cero con arquitectura separada de Frontend y Backend. ¡Regístrate, haz login y disfruta de ONPIK!
 
 ---
 
