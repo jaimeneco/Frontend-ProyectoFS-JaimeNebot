@@ -1,5 +1,5 @@
 /*--------------------------------
-CSS HEADER GENERAL
+  CSS HEADER GENERAL
 --------------------------------*/
 .Header {
     display: flex;
@@ -7,96 +7,196 @@ CSS HEADER GENERAL
     justify-content: space-between;
     align-items: center;
     background: #202020;
-    margin: 0px;
+    padding: 0 20px;
+    position: relative;
+    z-index: 100;
 }
 
-/* CSS HEADER LOGOTIPO */
+/*--------------------------------
+  LOGOTIPO
+--------------------------------*/
 .Header-logoImage {
     width: 300px;
-    padding: 30px 40px;
+    padding: 20px 30px;
+    display: block;
 }
 
-/* CSS HEADER NAVEGACIÓN */
+/*--------------------------------
+  NAVEGACIÓN — DESKTOP
+--------------------------------*/
 .Header-nav {
     font-family: "Oswald", sans-serif;
     font-size: 1.3rem;
-    text-decoration: none;
-    color: #fff;
 }
 
 .Header-navList {
     display: flex;
     flex-direction: row;
+    align-items: center;
     list-style: none;
-    text-decoration: none;
-    color: #fff;
+    margin: 0;
+    padding: 0;
 }
 
 .Header-navLink {
+    display: block;
     color: #fff;
     text-decoration: none;
-    padding: 30px;
+    padding: 30px 20px;
+    transition: color 0.2s ease;
+    white-space: nowrap;
 }
 
-.Header-navLink img {
-    width: 25px;
-}
-
-.Header-navLink:hover {
+.Header-navLink:hover,
+.Header-navLink.active {
     text-decoration: underline;
     text-decoration-thickness: 3px;
+    text-underline-offset: 4px;
 }
 
-/* Tablet: 768px a 1024px */
+/* Iconos de perfil y carrito */
+.Header-navLink--icon {
+    padding: 20px 14px;
+    text-decoration: none !important;
+}
+
+.Header-navLink--icon img {
+    width: 25px;
+    display: block;
+    transition: transform 0.2s ease;
+}
+
+.Header-navLink--icon:hover img {
+    transform: scale(1.15);
+}
+
+/*--------------------------------
+  BOTÓN HAMBURGUESA
+  (oculto por defecto en desktop)
+--------------------------------*/
+.Header-hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 200;
+}
+
+.Header-hamburger span {
+    display: block;
+    width: 26px;
+    height: 2px;
+    background: #fff;
+    border-radius: 2px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    transform-origin: center;
+}
+
+/* Animación a X cuando está abierto */
+.Header-hamburger.is-open span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+
+.Header-hamburger.is-open span:nth-child(2) {
+    opacity: 0;
+    transform: scaleX(0);
+}
+
+.Header-hamburger.is-open span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+/*--------------------------------
+  OVERLAY (móvil)
+--------------------------------*/
+.Header-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 98;
+}
+
+/*--------------------------------
+  TABLET: 768px — 1024px
+--------------------------------*/
 @media (max-width: 1024px) {
-    .Header {
-        flex-direction: column;
-        align-items: center;
-        padding: 20px 0;
-    }
-
     .Header-logoImage {
-        width: 250px;
-        padding: 20px;
-    }
-
-    .Header-navList {
-        flex-direction: column;
-        align-items: center;
-        padding: 0;
+        width: 220px;
+        padding: 16px 20px;
     }
 
     .Header-navLink {
-        padding: 15px;
-        font-size: 1.2rem;
-    }
-}
-
-/* Móvil: menos de 768px */
-@media (max-width: 768px) {
-    .Header {
-        flex-direction: column;
-        align-items: center;
-        padding: 10px 0;
-    }
-
-    .Header-logoImage {
-        width: 200px;
-        padding: 10px;
-    }
-
-    .Header-navList {
-        flex-direction: column;
-        align-items: center;
-        padding: 0;
-    }
-
-    .Header-navLink {
-        padding: 10px;
+        padding: 24px 14px;
         font-size: 1.1rem;
     }
+}
 
-    .Header-navLink img {
-        width: 20px;
+/*--------------------------------
+  MÓVIL / HAMBURGUESA: < 768px
+--------------------------------*/
+@media (max-width: 768px) {
+    .Header {
+        padding: 0 16px;
+    }
+
+    .Header-logoImage {
+        width: 160px;
+        padding: 14px 0;
+    }
+
+    /* Mostrar botón hamburguesa */
+    .Header-hamburger {
+        display: flex;
+    }
+
+    /* Menú desplegable lateral (drawer desde la derecha) */
+    .Header-nav {
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: 260px;
+        background: #202020;
+        z-index: 199;
+        padding-top: 80px;
+        transform: translateX(100%);
+        transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+        box-shadow: -4px 0 20px rgba(0, 0, 0, 0.4);
+    }
+
+    .Header-nav.is-open {
+        transform: translateX(0);
+    }
+
+    /* Mostrar overlay cuando el menú está abierto */
+    .Header-nav.is-open ~ .Header-overlay,
+    .Header-overlay {
+        display: block;
+    }
+
+    .Header-navList {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+    }
+
+    .Header-navLink {
+        padding: 16px 30px;
+        font-size: 1.2rem;
+        width: 100%;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+    }
+
+    .Header-navLink--icon {
+        padding: 16px 30px;
+    }
+
+    .Header-navLink--icon img {
+        width: 22px;
     }
 }

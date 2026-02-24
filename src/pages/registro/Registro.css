@@ -1,95 +1,145 @@
-.Registro-header {
-    margin: 10px;
+/* ================================
+   REGISTRO — BASE (Desktop > 900px)
+   Paleta invertida: fondo claro
+   ================================ */
+
+   .Registro-header {
+    display: none;
 }
 
 .Registro-main {
     display: flex;
-    height: 130vh;
-    width: 100vw;
+    flex-direction: row;
+    height: 100vh;
+    width: 100%;
     overflow: hidden;
-    align-items: center;
-    background: #fff;
+    background-color: #f5f5f5;
 }
 
+/* --- Carrusel: mitad izquierda --- */
+.Registro-carrusel {
+    flex: 1;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* --- Panel de registro: mitad derecha --- */
 .Registro-login {
     flex: 1;
-    padding: 60px 80px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 48px 56px;
+    gap: 8px;
+    overflow-y: auto;
 }
 
+/* --- Logo + tagline --- */
 .Registro-logoGrande {
-    padding: 40px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    gap: 8px;
+    margin-bottom: 8px;
 }
 
 .Registro-logoImg {
-    width: 480px;
-    padding: 20px;
+    width: 220px;
 }
 
 .Registro-logoText {
     font-family: "Oswald", sans-serif;
-    font-size: 2.8rem;
+    font-size: 1.1rem;
     font-weight: 300;
-    color: #202020;
+    color: #888;
     text-align: center;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
 }
 
+/* --- Título formulario --- */
 .Registro-mainFormTitle {
     font-family: "Oswald", sans-serif;
     color: #202020;
-    padding: 5px;
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 500;
+    text-align: center;
+    letter-spacing: 0.08em;
+    margin-bottom: 4px;
+}
+
+/* --- Contenedor del form --- */
+.Login-divForm,
+.Registro-divForm {
+    width: 100%;
+    max-width: 380px;
+}
+
+/* --- Error --- */
+.Login-error {
+    background-color: rgba(220, 60, 60, 0.08);
+    border: 1px solid rgba(220, 60, 60, 0.35);
+    color: #c0392b;
+    font-family: "Oswald", sans-serif;
+    font-size: 0.95rem;
+    padding: 10px 16px;
+    border-radius: 6px;
+    margin-top: 12px;
     text-align: center;
 }
 
+/* --- Link login --- */
 .Registro-inicio {
-    color: #202020;
-    font-size: 1.3rem;
+    color: #888;
+    font-size: 0.95rem;
     font-family: "Oswald", sans-serif;
-    padding: 20px;
     text-align: center;
+    margin-top: 4px;
 }
 
 .Link-registro {
-    color: #202020;
-    font-size: 1.6rem;
-    transition: transform 0.3s ease, color 0.3s ease;
+    color: #c69c6d;
+    font-size: 0.95rem;
+    font-weight: 500;
+    text-decoration: none;
+    letter-spacing: 0.04em;
+    transition: color 0.25s ease;
 }
 
 .Link-registro:hover {
-    transform: scale(1.2);
-    color: #c69c6d;
+    color: #202020;
 }
 
+/* ================================
+   FOOTER
+   ================================ */
 .WelcomeFooter-navList {
     display: flex;
-    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     background-color: #c69c6d;
-    justify-content: space-between;
-    padding: 20px 60px;
+    padding: 14px 40px;
     list-style: none;
+    margin: 0;
+    gap: 20px;
     font-family: "Oswald", sans-serif;
 }
 
 .WelcomeFooter-textLink {
     color: #202020;
-    font-size: 1.5rem;
+    font-size: 0.95rem;
     text-align: center;
 }
 
 .WelcomeFooter-navLink {
     color: #202020;
-    font-size: 1.2rem;
+    font-size: 0.95rem;
     text-decoration: none;
-    transition: color 0.3s ease;
+    transition: color 0.25s ease;
 }
 
 .WelcomeFooter-navLink:hover {
@@ -97,100 +147,106 @@
 }
 
 
+/* ================================
+   TABLET (601px – 900px)
+   ================================ */
 @media (max-width: 900px) {
     .Registro-main {
         flex-direction: column;
         height: auto;
-        padding: 20px;
+        min-height: 100vh;
+        overflow-y: auto;
+    }
+
+    .Registro-carrusel {
+        flex: none;
+        height: 240px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
     }
 
     .Registro-login {
-        padding: 40px 30px;
-        width: 100%;
+        flex: none;
+        padding: 40px 32px;
+        gap: 12px;
     }
 
     .Registro-logoImg {
-        width: 280px;
-        padding: 16px;
+        width: 180px;
     }
 
     .Registro-logoText {
-        font-size: 2.2rem;
+        font-size: 1rem;
     }
 
     .Registro-mainFormTitle {
-        font-size: 1.8rem;
+        font-size: 1.3rem;
     }
 
-    .Registro-inicio {
-        font-size: 1.1rem;
-        padding: 15px;
-    }
-
-    .Link-registro {
-        font-size: 1.4rem;
-    }
-
-    .WelcomeFooter-navList {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 20px;
-    }
-
-    .WelcomeFooter-navLink {
-        font-size: 1.1rem;
+    .Login-divForm,
+    .Registro-divForm {
+        max-width: 440px;
     }
 }
 
 
+/* ================================
+   MÓVIL (≤ 600px)
+   ================================ */
 @media (max-width: 600px) {
     .Registro-main {
         flex-direction: column;
         height: auto;
-        padding: 20px;
+        min-height: 100vh;
+    }
+
+    .Registro-carrusel {
+        display: none !important;
     }
 
     .Registro-login {
-        padding: 20px 16px;
-        width: 100%;
-    }
-
-    .Registro-logoGrande {
-        padding: 10px;
+        padding: 40px 20px 32px;
+        gap: 12px;
+        justify-content: center;
+        min-height: 100vh;
     }
 
     .Registro-logoImg {
-        width: 200px;
-        padding: 12px;
+        width: 160px;
     }
 
     .Registro-logoText {
-        font-size: 1.6rem;
+        font-size: 0.9rem;
     }
 
     .Registro-mainFormTitle {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
+    }
+
+    .Login-divForm,
+    .Registro-divForm {
+        max-width: 100%;
     }
 
     .Registro-inicio {
-        font-size: 1rem;
-        padding: 10px;
+        font-size: 0.9rem;
     }
 
     .Link-registro {
-        font-size: 1.2rem;
+        font-size: 0.9rem;
     }
 
     .WelcomeFooter-navList {
         flex-direction: column;
-        align-items: center;
-        padding: 20px;
-        gap: 10px;
+        gap: 8px;
+        padding: 14px 20px;
     }
 
     .WelcomeFooter-textLink,
     .WelcomeFooter-navLink {
-        font-size: 1rem;
-        text-align: center;
+        font-size: 0.85rem;
     }
 }

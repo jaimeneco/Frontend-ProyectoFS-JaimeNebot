@@ -1,95 +1,120 @@
-.Form-registro {
-    font-family: 'Oswald', sans-serif;
-    background-color: #ffffff;
-    color: #000000;
-    margin: 0;
-    padding: 2rem;
-    border-radius: 20px;
+/* ================================
+   FORM REGISTRO — BASE
+   ================================ */
+
+.Form-inicio {
+    width: 100%;
 }
 
 .Main-form {
-    max-width: 400px;
-    margin: 0 auto;
-    padding: 40px;
+    width: 100%;
+    padding: 32px 36px;
     background-color: #fff;
-    border: 3px solid #202020;
-    border-radius: 8px;
+    border-radius: 10px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
 }
 
 .Fieldset {
     display: flex;
     flex-direction: column;
     border: none;
+    padding: 0;
+    margin: 0;
+    gap: 4px;
 }
 
+/* --- Labels e inputs --- */
 .Fieldset-label {
-    padding: 0px 0px;
-    margin-bottom: 20px;
-    font-size: 1.4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 16px;
+}
+
+.Fieldset-inputTitle {
+    font-family: "Oswald", sans-serif;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #444;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin: 0;
 }
 
 .Fieldset-input {
-    padding: 10px 40px;
-    border: 1.5px solid #ccc;
-    border-radius: 4px;
-    font-size: 1rem;
+    padding: 11px 14px;
+    border: 1.5px solid #ddd;
+    border-radius: 6px;
+    font-size: 0.95rem;
     font-family: 'Lucida Sans', sans-serif;
+    color: #202020;
+    background: #fafafa;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    outline: none;
 }
 
+/* Acento dorado en focus — igual que FormInicio */
+.Fieldset-input:focus {
+    border-color: #c69c6d;
+    box-shadow: 0 0 0 3px rgba(198, 156, 109, 0.18);
+    background: #fff;
+}
+
+/* --- Botón: dorado como color principal (inverso a FormInicio) --- */
 .Button {
     width: 100%;
-    padding: 20px;
-    margin: 20px 0px;
-    background-color: #000;
+    padding: 13px;
+    margin-top: 8px;
+    background-color: #c69c6d;
     color: #fff;
     border: none;
-    border-radius: 4px;
+    border-radius: 6px;
+    font-family: "Oswald", sans-serif;
     font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.25s ease, transform 0.15s ease;
 }
 
 .Button[type="submit"]:hover {
-    background-color: #333;
+    background-color: #202020;
+    transform: translateY(-1px);
 }
 
-/* Tablet: menos de 1024px */
+.Button[type="submit"]:active {
+    transform: translateY(0);
+}
+
+
+/* ================================
+   TABLET (≤ 1024px)
+   ================================ */
 @media (max-width: 1024px) {
     .Main-form {
-        max-width: 90%; /* Aumenta el tamaño en tablets */
-        padding: 30px;
-    }
-
-    .Fieldset-label {
-        font-size: 1.2rem; /* Reduce un poco el tamaño de las etiquetas */
-    }
-
-    .Fieldset-input {
-        font-size: 0.9rem; /* Ajusta el tamaño del input */
-    }
-
-    .Button {
-        font-size: 0.9rem; /* Ajusta el tamaño del botón */
+        padding: 28px 28px;
     }
 }
 
-/* Móvil: menos de 768px */
-@media (max-width: 768px) {
-    .Main-form {
-        max-width: 95%; /* Más espacio para móviles */
-        padding: 20px;
-    }
 
-    .Fieldset-label {
-        font-size: 1rem; /* Ajusta más el tamaño de las etiquetas */
+/* ================================
+   MÓVIL (≤ 600px)
+   ================================ */
+@media (max-width: 600px) {
+    .Main-form {
+        padding: 24px 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
     }
 
     .Fieldset-input {
-        font-size: 0.9rem; /* Ajusta más el tamaño del input */
+        font-size: 0.9rem;
+        padding: 10px 12px;
     }
 
     .Button {
-        padding: 15px;
-        font-size: 0.9rem; /* Ajusta el tamaño del botón */
+        padding: 12px;
+        font-size: 0.9rem;
     }
 }

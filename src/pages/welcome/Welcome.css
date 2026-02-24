@@ -1,95 +1,139 @@
-/* ==== ESTILOS BASE (pantallas grandes) ==== */
+/* ================================
+   WELCOME — BASE (Desktop > 900px)
+   ================================ */
 
-.Welcome-main {
+   .Welcome-main {
     display: flex;
+    flex-direction: row;
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     overflow: hidden;
-    align-items: center;
     background-color: #202020;
 }
 
-.Main-login {
+/* --- Carrusel: mitad izquierda --- */
+.Welcome-carrusel {
     flex: 1;
-    padding: 60px 80px;
+    height: 100%;
+    overflow: hidden;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
 }
 
+/* --- Panel de login: mitad derecha --- */
+.Main-login {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 48px 56px;
+    gap: 8px;
+    overflow-y: auto;
+}
+
+/* --- Logo + tagline --- */
 .Logo-grande {
-    padding: 40px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    gap: 8px;
+    margin-bottom: 8px;
 }
 
 .Welcome-logoImg {
-    width: 480px;
-    padding: 20px;
+    width: 220px;
 }
 
 .Logo-text {
     font-family: "Oswald", sans-serif;
-    font-size: 2.8rem;
+    font-size: 1.1rem;
     font-weight: 300;
-    color: #fff;
+    color: #a0a0a0;
     text-align: center;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
 }
 
+/* --- Título formulario --- */
 .Main-formTitle {
     font-family: "Oswald", sans-serif;
     color: #fff;
-    padding: 20px;
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 500;
+    text-align: center;
+    letter-spacing: 0.08em;
+    margin-bottom: 4px;
+}
+
+/* --- Contenedor del form --- */
+.Login-divForm {
+    width: 100%;
+    max-width: 380px;
+}
+
+/* --- Error --- */
+.Login-error {
+    background-color: rgba(220, 60, 60, 0.12);
+    border: 1px solid rgba(220, 60, 60, 0.4);
+    color: #ff6b6b;
+    font-family: "Oswald", sans-serif;
+    font-size: 0.95rem;
+    padding: 10px 16px;
+    border-radius: 6px;
+    margin-top: 12px;
     text-align: center;
 }
 
+/* --- Link registro --- */
 .WelcomeRegistro-inicio {
-    color: #fff;
-    font-size: 1.3rem;
+    color: #a0a0a0;
+    font-size: 0.95rem;
     font-family: "Oswald", sans-serif;
-    padding: 20px;
     text-align: center;
+    margin-top: 4px;
 }
 
 .WelcomeLink-registro {
     color: #c69c6d;
-    font-size: 1.6rem;
-    transition: transform 0.3s ease, color 0.3s ease;
+    font-size: 0.95rem;
+    font-weight: 500;
+    text-decoration: none;
+    letter-spacing: 0.04em;
+    transition: color 0.25s ease;
 }
 
 .WelcomeLink-registro:hover {
-    transform: scale(1.1);
     color: #fff;
 }
 
+/* ================================
+   FOOTER
+   ================================ */
 .WelcomeFooter-navList {
     display: flex;
-    flex-direction: row;
-    background-color: #c69c6d;
     justify-content: center;
     align-items: center;
-    padding: 20px 60px;
+    background-color: #c69c6d;
+    padding: 14px 40px;
     list-style: none;
-    font-family: "Oswald", sans-serif;
+    margin: 0;
     gap: 20px;
+    font-family: "Oswald", sans-serif;
 }
 
 .WelcomeFooter-textLink {
     color: #202020;
-    font-size: 1.5rem;
+    font-size: 0.95rem;
     text-align: center;
 }
 
 .WelcomeFooter-navLink {
     color: #202020;
-    font-size: 1.2rem;
+    font-size: 0.95rem;
     text-decoration: none;
-    transition: color 0.3s ease;
+    transition: color 0.25s ease;
 }
 
 .WelcomeFooter-navLink:hover {
@@ -97,95 +141,104 @@
 }
 
 
-/* ==== MEDIA QUERIES: TABLETS (601px a 900px) ==== */
+/* ================================
+   TABLET (601px – 900px)
+   ================================ */
 @media (max-width: 900px) {
     .Welcome-main {
         flex-direction: column;
         height: auto;
-        padding: 30px 0;
+        min-height: 100vh;
+        overflow-y: auto;
+    }
+
+    .Welcome-carrusel {
+        flex: none;
+        height: 240px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
     }
 
     .Main-login {
-        padding: 40px 30px;
-    }
-
-    .Logo-text {
-        font-size: 2.2rem;
+        flex: none;
+        padding: 40px 32px;
+        gap: 12px;
     }
 
     .Welcome-logoImg {
-        width: 280px;
-        padding: 16px;
+        width: 180px;
+    }
+
+    .Logo-text {
+        font-size: 1rem;
     }
 
     .Main-formTitle {
-        font-size: 1.8rem;
+        font-size: 1.3rem;
     }
 
-    .WelcomeRegistro-inicio {
-        font-size: 1.1rem;
-        padding: 15px;
-    }
-
-    .WelcomeLink-registro {
-        font-size: 1.4rem;
-    }
-
-    .WelcomeFooter-navList {
-        flex-wrap: wrap;
-        gap: 15px;
-    }
-
-    .WelcomeFooter-textLink,
-    .WelcomeFooter-navLink {
-        font-size: 1.2rem;
+    .Login-divForm {
+        max-width: 440px;
     }
 }
 
 
-/* ==== MEDIA QUERIES: MÓVILES (hasta 600px) ==== */
+/* ================================
+   MÓVIL (≤ 600px)
+   ================================ */
 @media (max-width: 600px) {
     .Welcome-main {
         flex-direction: column;
         height: auto;
-        padding: 20px;
+        min-height: 100vh;
+    }
+
+    .Welcome-carrusel {
+        display: none !important;
     }
 
     .Main-login {
-        padding: 20px;
-        width: 100%;
+        padding: 40px 20px 32px;
+        gap: 12px;
+        justify-content: center;
+        min-height: 100vh;
     }
 
-    .Logo-grande {
-        padding: 20px;
+    .Welcome-logoImg {
+        width: 160px;
     }
 
     .Logo-text {
-        font-size: 1.6rem;
+        font-size: 0.9rem;
     }
 
     .Main-formTitle {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
+    }
+
+    .Login-divForm {
+        max-width: 100%;
     }
 
     .WelcomeRegistro-inicio {
-        font-size: 1rem;
-        padding: 10px;
+        font-size: 0.9rem;
     }
 
     .WelcomeLink-registro {
-        font-size: 1.2rem;
+        font-size: 0.9rem;
     }
 
     .WelcomeFooter-navList {
         flex-direction: column;
-        padding: 20px;
-        gap: 10px;
+        gap: 8px;
+        padding: 14px 20px;
     }
 
     .WelcomeFooter-textLink,
     .WelcomeFooter-navLink {
-        font-size: 1rem;
-        text-align: center;
+        font-size: 0.85rem;
     }
 }
